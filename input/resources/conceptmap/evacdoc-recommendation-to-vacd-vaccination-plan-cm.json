@@ -1,0 +1,1417 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "evacdoc-recommendation-to-vacd-vaccination-plan-cm",
+  "url": "http://fhir.ch/ig/evacdoc-fhir-maps/ConceptMap/evacdoc-recommendation-to-vacd-vaccination-plan-cm",
+  "version": "0.1.0",
+  "name": "eVacDocRecommendationToCHVACDVaccinationPlanMap",
+  "title": "eVacDoc Recommendation to CHVACD Vaccination Plan Map",
+  "publisher": "RALY GmbH",
+  "contact": [ {
+    "name": "RALY GmbH",
+    "telecom": [ {
+      "system": "url",
+      "value": "https://www.raly.ch/"
+    } ]
+  } ],
+  "sourceUri": "http://fhir.ch/ig/evacdoc-fhir-maps/ValueSet/evacdoc-vaccines-vs",
+  "targetUri": "http://fhir.ch/ig/ch-vacd/ValueSet/ch-vacd-ch-vaccination-plan-immunizations-vs",
+  "group": [ {
+    "source": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+    "target": "http://snomed.info/sct",
+    "element": [ {
+      "code": "FSME-Immun 0.25 ml Junior",
+      "display": "FSME-Immun 0.25 ml Junior",
+      "target": [ {
+        "code": "281658005",
+        "display": "Administration of vaccine product containing only Tick-borne encephalitis virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "FSME-Immun CC",
+      "display": "FSME-Immun CC",
+      "target": [ {
+        "code": "281658005",
+        "display": "Administration of vaccine product containing only Tick-borne encephalitis virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "NeisVac-C",
+      "display": "NeisVac-C",
+      "target": [ {
+        "code": "41088001",
+        "display": "Administration of vaccine product containing only Neisseria meningitidis antigen (procedure)"
+      } ]
+    }, {
+      "code": "Encepur N",
+      "display": "Encepur N",
+      "target": [ {
+        "code": "281658005",
+        "display": "Administration of vaccine product containing only Tick-borne encephalitis virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Encepur N Kinder / Enfants",
+      "display": "Encepur N Kinder / Enfants",
+      "target": [ {
+        "code": "281658005",
+        "display": "Administration of vaccine product containing only Tick-borne encephalitis virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Epaxal",
+      "display": "Epaxal",
+      "target": [ {
+        "code": "243789007",
+        "display": "Administration of vaccine product containing only Hepatitis A virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Heprecomb",
+      "display": "Heprecomb",
+      "target": [ {
+        "code": "16584000",
+        "display": "Administration of vaccine product containing only Hepatitis B virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Heprecomb Kinder",
+      "display": "Heprecomb Kinder",
+      "target": [ {
+        "code": "16584000",
+        "display": "Administration of vaccine product containing only Hepatitis B virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Inflexal V",
+      "display": "Inflexal V",
+      "target": [ {
+        "code": "86198006",
+        "display": "Administration of vaccine product containing only Influenza virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Menjugate",
+      "display": "Menjugate",
+      "target": [ {
+        "code": "41088001",
+        "display": "Administration of vaccine product containing only Neisseria meningitidis antigen (procedure)"
+      } ]
+    }, {
+      "code": "Moraten",
+      "display": "Moraten",
+      "target": [ {
+        "code": "47435007",
+        "display": "Administration of vaccine product containing only Measles morbillivirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "MoRu-Viraten",
+      "display": "MoRu-Viraten",
+      "target": [ {
+        "code": "82314000",
+        "display": "Administration of vaccine product containing only Rubella virus antigen (procedure)"
+      }, {
+        "code": "47435007",
+        "display": "Administration of vaccine product containing only Measles morbillivirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Orochol",
+      "display": "Orochol",
+      "target": [ {
+        "code": "28877009"
+      } ]
+    }, {
+      "code": "Orochol E",
+      "display": "Orochol E",
+      "target": [ {
+        "code": "28877009"
+      } ]
+    }, {
+      "code": "Poliomyelitis Impfstoff Berna",
+      "display": "Poliomyelitis Impfstoff Berna",
+      "target": [ {
+        "code": "72093006",
+        "display": "Administration of vaccine product containing only Human poliovirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Rabipur",
+      "display": "Rabipur",
+      "target": [ {
+        "code": "34631000",
+        "display": "Administration of vaccine product containing only Rabies lyssavirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Td-pur",
+      "display": "Td-pur",
+      "target": [ {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      } ]
+    }, {
+      "code": "Td-Virelon",
+      "display": "Td-Virelon",
+      "target": [ {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      }, {
+        "code": "72093006",
+        "display": "Administration of vaccine product containing only Human poliovirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Triviraten",
+      "display": "Triviraten",
+      "target": [ {
+        "code": "82314000",
+        "display": "Administration of vaccine product containing only Rubella virus antigen (procedure)"
+      }, {
+        "code": "47435007",
+        "display": "Administration of vaccine product containing only Measles morbillivirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Vivotif",
+      "display": "Vivotif",
+      "target": [ {
+        "code": "30338008"
+      } ]
+    }, {
+      "code": "Vivotif L",
+      "display": "Vivotif L",
+      "target": [ {
+        "code": "30338008"
+      } ]
+    }, {
+      "code": "Boostrix",
+      "display": "Boostrix",
+      "target": [ {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "39343008",
+        "display": "Administration of vaccine product containing only Bordetella pertussis antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      } ]
+    }, {
+      "code": "Boostrix Polio",
+      "display": "Boostrix Polio",
+      "target": [ {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "39343008",
+        "display": "Administration of vaccine product containing only Bordetella pertussis antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      }, {
+        "code": "72093006",
+        "display": "Administration of vaccine product containing only Human poliovirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Ditanrix",
+      "display": "Ditanrix",
+      "target": [ {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      } ]
+    }, {
+      "code": "Engerix-B 10",
+      "display": "Engerix-B 10",
+      "target": [ {
+        "code": "16584000",
+        "display": "Administration of vaccine product containing only Hepatitis B virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Engerix-B 20",
+      "display": "Engerix-B 20",
+      "target": [ {
+        "code": "16584000",
+        "display": "Administration of vaccine product containing only Hepatitis B virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Fluarix",
+      "display": "Fluarix",
+      "target": [ {
+        "code": "86198006",
+        "display": "Administration of vaccine product containing only Influenza virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Havrix 1440",
+      "display": "Havrix 1440",
+      "target": [ {
+        "code": "243789007",
+        "display": "Administration of vaccine product containing only Hepatitis A virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Havrix 720",
+      "display": "Havrix 720",
+      "target": [ {
+        "code": "243789007",
+        "display": "Administration of vaccine product containing only Hepatitis A virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Hiberix",
+      "display": "Hiberix",
+      "target": [ {
+        "code": "127787002",
+        "display": "Administration of vaccine product containing only Haemophilus influenzae type B antigen (procedure)"
+      } ]
+    }, {
+      "code": "Infanrix DTPa",
+      "display": "Infanrix DTPa",
+      "target": [ {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "39343008",
+        "display": "Administration of vaccine product containing only Bordetella pertussis antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      } ]
+    }, {
+      "code": "Infanrix DTPa-IPV",
+      "display": "Infanrix DTPa-IPV",
+      "target": [ {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "39343008",
+        "display": "Administration of vaccine product containing only Bordetella pertussis antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      }, {
+        "code": "72093006",
+        "display": "Administration of vaccine product containing only Human poliovirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Infanrix DTPa-IPV+Hib",
+      "display": "Infanrix DTPa-IPV+Hib",
+      "target": [ {
+        "code": "127787002",
+        "display": "Administration of vaccine product containing only Haemophilus influenzae type B antigen (procedure)"
+      }, {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "39343008",
+        "display": "Administration of vaccine product containing only Bordetella pertussis antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      }, {
+        "code": "72093006",
+        "display": "Administration of vaccine product containing only Human poliovirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Infanrix hexa",
+      "display": "Infanrix hexa",
+      "target": [ {
+        "code": "127787002",
+        "display": "Administration of vaccine product containing only Haemophilus influenzae type B antigen (procedure)"
+      }, {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "39343008",
+        "display": "Administration of vaccine product containing only Bordetella pertussis antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      }, {
+        "code": "16584000",
+        "display": "Administration of vaccine product containing only Hepatitis B virus antigen (procedure)"
+      }, {
+        "code": "72093006",
+        "display": "Administration of vaccine product containing only Human poliovirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Infanrix Penta",
+      "display": "Infanrix Penta",
+      "target": [ {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "39343008",
+        "display": "Administration of vaccine product containing only Bordetella pertussis antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      }, {
+        "code": "16584000",
+        "display": "Administration of vaccine product containing only Hepatitis B virus antigen (procedure)"
+      }, {
+        "code": "72093006",
+        "display": "Administration of vaccine product containing only Human poliovirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Mencevax ACWY",
+      "display": "Mencevax ACWY",
+      "target": [ {
+        "code": "41088001",
+        "display": "Administration of vaccine product containing only Neisseria meningitidis antigen (procedure)"
+      }, {
+        "code": "390892002"
+      } ]
+    }, {
+      "code": "Poliorix",
+      "display": "Poliorix",
+      "target": [ {
+        "code": "72093006",
+        "display": "Administration of vaccine product containing only Human poliovirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Priorix",
+      "display": "Priorix",
+      "target": [ {
+        "code": "82314000",
+        "display": "Administration of vaccine product containing only Rubella virus antigen (procedure)"
+      }, {
+        "code": "47435007",
+        "display": "Administration of vaccine product containing only Measles morbillivirus antigen (procedure)"
+      }, {
+        "code": "50583002",
+        "display": "Administration of vaccine product containing only Mumps orthorubulavirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Twinrix 720/20",
+      "display": "Twinrix 720/20",
+      "target": [ {
+        "code": "16584000",
+        "display": "Administration of vaccine product containing only Hepatitis B virus antigen (procedure)"
+      }, {
+        "code": "243789007",
+        "display": "Administration of vaccine product containing only Hepatitis A virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Varilrix",
+      "display": "Varilrix",
+      "target": [ {
+        "code": "68525005"
+      } ]
+    }, {
+      "code": "Attenuvax",
+      "display": "Attenuvax",
+      "target": [ {
+        "code": "47435007",
+        "display": "Administration of vaccine product containing only Measles morbillivirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "BCG",
+      "display": "BCG",
+      "target": [ {
+        "code": "42284007",
+        "display": "Administration of vaccine product containing only live attenuated Mycobacterium bovis antigen (procedure)"
+      } ]
+    }, {
+      "code": "Gen H-B-Vax 10",
+      "display": "Gen H-B-Vax 10",
+      "target": [ {
+        "code": "16584000",
+        "display": "Administration of vaccine product containing only Hepatitis B virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "HBVAXPRO 40",
+      "display": "HBVAXPRO 40",
+      "target": [ {
+        "code": "16584000",
+        "display": "Administration of vaccine product containing only Hepatitis B virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Gen H-B-Vax 5",
+      "display": "Gen H-B-Vax 5",
+      "target": [ {
+        "code": "16584000",
+        "display": "Administration of vaccine product containing only Hepatitis B virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "HBVAXPRO 10",
+      "display": "HBVAXPRO 10",
+      "target": [ {
+        "code": "16584000",
+        "display": "Administration of vaccine product containing only Hepatitis B virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "HBVAXPRO 5",
+      "display": "HBVAXPRO 5",
+      "target": [ {
+        "code": "16584000",
+        "display": "Administration of vaccine product containing only Hepatitis B virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "MMR-II",
+      "display": "MMR-II",
+      "target": [ {
+        "code": "82314000",
+        "display": "Administration of vaccine product containing only Rubella virus antigen (procedure)"
+      }, {
+        "code": "47435007",
+        "display": "Administration of vaccine product containing only Measles morbillivirus antigen (procedure)"
+      }, {
+        "code": "50583002",
+        "display": "Administration of vaccine product containing only Mumps orthorubulavirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Meningokokken-Impfstoff A+C Mérieux",
+      "display": "Meningokokken-Impfstoff A+C Mérieux",
+      "target": [ {
+        "code": "390892002"
+      } ]
+    }, {
+      "code": "Meruvax",
+      "display": "Meruvax",
+      "target": [ {
+        "code": "82314000",
+        "display": "Administration of vaccine product containing only Rubella virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Mumpsvax",
+      "display": "Mumpsvax",
+      "target": [ {
+        "code": "50583002",
+        "display": "Administration of vaccine product containing only Mumps orthorubulavirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Mutagrip",
+      "display": "Mutagrip",
+      "target": [ {
+        "code": "86198006",
+        "display": "Administration of vaccine product containing only Influenza virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Pentavac",
+      "display": "Pentavac",
+      "target": [ {
+        "code": "127787002",
+        "display": "Administration of vaccine product containing only Haemophilus influenzae type B antigen (procedure)"
+      }, {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "39343008",
+        "display": "Administration of vaccine product containing only Bordetella pertussis antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      }, {
+        "code": "72093006",
+        "display": "Administration of vaccine product containing only Human poliovirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Pneumovax-23",
+      "display": "Pneumovax-23",
+      "target": [ {
+        "code": "135642004"
+      } ]
+    }, {
+      "code": "Revaxis",
+      "display": "Revaxis",
+      "target": [ {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      }, {
+        "code": "72093006",
+        "display": "Administration of vaccine product containing only Human poliovirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Stamaril",
+      "display": "Stamaril",
+      "target": [ {
+        "code": "67308009",
+        "display": "Administration of vaccine product containing only Yellow fever virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Tetravac",
+      "display": "Tetravac",
+      "target": [ {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "39343008",
+        "display": "Administration of vaccine product containing only Bordetella pertussis antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      }, {
+        "code": "72093006",
+        "display": "Administration of vaccine product containing only Human poliovirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Tollwut Impfstoff Mérieux",
+      "display": "Tollwut Impfstoff Mérieux",
+      "target": [ {
+        "code": "34631000",
+        "display": "Administration of vaccine product containing only Rabies lyssavirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Varivax",
+      "display": "Varivax",
+      "target": [ {
+        "code": "68525005"
+      } ]
+    }, {
+      "code": "Influvac",
+      "display": "Influvac",
+      "target": [ {
+        "code": "86198006",
+        "display": "Administration of vaccine product containing only Influenza virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Influvac plus",
+      "display": "Influvac plus",
+      "target": [ {
+        "code": "86198006",
+        "display": "Administration of vaccine product containing only Influenza virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Meningitec",
+      "display": "Meningitec",
+      "target": [ {
+        "code": "41088001",
+        "display": "Administration of vaccine product containing only Neisseria meningitidis antigen (procedure)"
+      } ]
+    }, {
+      "code": "Prevenar-7",
+      "display": "Prevenar-7",
+      "target": [ {
+        "code": "448964007"
+      } ]
+    }, {
+      "code": "Hexavac",
+      "display": "Hexavac",
+      "target": [ {
+        "code": "127787002",
+        "display": "Administration of vaccine product containing only Haemophilus influenzae type B antigen (procedure)"
+      }, {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "39343008",
+        "display": "Administration of vaccine product containing only Bordetella pertussis antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      }, {
+        "code": "16584000",
+        "display": "Administration of vaccine product containing only Hepatitis B virus antigen (procedure)"
+      }, {
+        "code": "72093006",
+        "display": "Administration of vaccine product containing only Human poliovirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Infanrix DTPa+Hib",
+      "display": "Infanrix DTPa+Hib",
+      "target": [ {
+        "code": "127787002",
+        "display": "Administration of vaccine product containing only Haemophilus influenzae type B antigen (procedure)"
+      }, {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "39343008",
+        "display": "Administration of vaccine product containing only Bordetella pertussis antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      } ]
+    }, {
+      "code": "Twinrix 360/10",
+      "display": "Twinrix 360/10",
+      "target": [ {
+        "code": "16584000",
+        "display": "Administration of vaccine product containing only Hepatitis B virus antigen (procedure)"
+      }, {
+        "code": "243789007",
+        "display": "Administration of vaccine product containing only Hepatitis A virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Pluserix",
+      "display": "Pluserix",
+      "target": [ {
+        "code": "82314000",
+        "display": "Administration of vaccine product containing only Rubella virus antigen (procedure)"
+      }, {
+        "code": "47435007",
+        "display": "Administration of vaccine product containing only Measles morbillivirus antigen (procedure)"
+      }, {
+        "code": "50583002",
+        "display": "Administration of vaccine product containing only Mumps orthorubulavirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Acel Immune",
+      "display": "Acel Immune",
+      "target": [ {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "39343008",
+        "display": "Administration of vaccine product containing only Bordetella pertussis antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      } ]
+    }, {
+      "code": "Acel P",
+      "display": "Acel P",
+      "target": [ {
+        "code": "39343008",
+        "display": "Administration of vaccine product containing only Bordetella pertussis antigen (procedure)"
+      } ]
+    }, {
+      "code": "Act-Hib",
+      "display": "Act-Hib",
+      "target": [ {
+        "code": "127787002",
+        "display": "Administration of vaccine product containing only Haemophilus influenzae type B antigen (procedure)"
+      } ]
+    }, {
+      "code": "Anatoxal DiTePer",
+      "display": "Anatoxal DiTePer",
+      "target": [ {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "39343008",
+        "display": "Administration of vaccine product containing only Bordetella pertussis antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      } ]
+    }, {
+      "code": "Anatoxal DiTe Erwachsene",
+      "display": "Anatoxal DiTe Erwachsene",
+      "target": [ {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      } ]
+    }, {
+      "code": "Anatoxal DiTe N Erwachsene",
+      "display": "Anatoxal DiTe N Erwachsene",
+      "target": [ {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      } ]
+    }, {
+      "code": "Anatoxal Di",
+      "display": "Anatoxal Di",
+      "target": [ {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      } ]
+    }, {
+      "code": "Anatoxal Te",
+      "display": "Anatoxal Te",
+      "target": [ {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      } ]
+    }, {
+      "code": "Anatoxal Te N",
+      "display": "Anatoxal Te N",
+      "target": [ {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      } ]
+    }, {
+      "code": "Arilvax",
+      "display": "Arilvax",
+      "target": [ {
+        "code": "67308009",
+        "display": "Administration of vaccine product containing only Yellow fever virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "BCG Vaccin Mérieux",
+      "display": "BCG Vaccin Mérieux",
+      "target": [ {
+        "code": "42284007",
+        "display": "Administration of vaccine product containing only live attenuated Mycobacterium bovis antigen (procedure)"
+      } ]
+    }, {
+      "code": "Biviraten",
+      "display": "Biviraten",
+      "target": [ {
+        "code": "47435007",
+        "display": "Administration of vaccine product containing only Measles morbillivirus antigen (procedure)"
+      }, {
+        "code": "50583002",
+        "display": "Administration of vaccine product containing only Mumps orthorubulavirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "DiTe pediatric adsorbed",
+      "display": "DiTe pediatric adsorbed",
+      "target": [ {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      } ]
+    }, {
+      "code": "Dukoral",
+      "display": "Dukoral",
+      "target": [ {
+        "code": "28877009"
+      } ]
+    }, {
+      "code": "Ervevax",
+      "display": "Ervevax",
+      "target": [ {
+        "code": "82314000",
+        "display": "Administration of vaccine product containing only Rubella virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "HibTiter",
+      "display": "HibTiter",
+      "target": [ {
+        "code": "127787002",
+        "display": "Administration of vaccine product containing only Haemophilus influenzae type B antigen (procedure)"
+      } ]
+    }, {
+      "code": "Infanrix DTPa-HBV",
+      "display": "Infanrix DTPa-HBV",
+      "target": [ {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "39343008",
+        "display": "Administration of vaccine product containing only Bordetella pertussis antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      }, {
+        "code": "16584000",
+        "display": "Administration of vaccine product containing only Hepatitis B virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Lyssavac Berna",
+      "display": "Lyssavac Berna",
+      "target": [ {
+        "code": "34631000",
+        "display": "Administration of vaccine product containing only Rabies lyssavirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Vaccin méningococcique A+C Mérieux",
+      "display": "Vaccin méningococcique A+C Mérieux"
+    }, {
+      "code": "MM Vax",
+      "display": "MM Vax",
+      "target": [ {
+        "code": "47435007",
+        "display": "Administration of vaccine product containing only Measles morbillivirus antigen (procedure)"
+      }, {
+        "code": "50583002",
+        "display": "Administration of vaccine product containing only Mumps orthorubulavirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Mumaten",
+      "display": "Mumaten",
+      "target": [ {
+        "code": "50583002",
+        "display": "Administration of vaccine product containing only Mumps orthorubulavirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Pedvax",
+      "display": "Pedvax",
+      "target": [ {
+        "code": "127787002",
+        "display": "Administration of vaccine product containing only Haemophilus influenzae type B antigen (procedure)"
+      } ]
+    }, {
+      "code": "Pentacoq",
+      "display": "Pentacoq",
+      "target": [ {
+        "code": "127787002",
+        "display": "Administration of vaccine product containing only Haemophilus influenzae type B antigen (procedure)"
+      }, {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "39343008",
+        "display": "Administration of vaccine product containing only Bordetella pertussis antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      }, {
+        "code": "72093006",
+        "display": "Administration of vaccine product containing only Human poliovirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Pnu-Immune",
+      "display": "Pnu-Immune",
+      "target": [ {
+        "code": "135642004"
+      } ]
+    }, {
+      "code": "Polio Salk",
+      "display": "Polio Salk",
+      "target": [ {
+        "code": "72093006",
+        "display": "Administration of vaccine product containing only Human poliovirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Polio Sabin",
+      "display": "Polio Sabin",
+      "target": [ {
+        "code": "72093006",
+        "display": "Administration of vaccine product containing only Human poliovirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Poloral",
+      "display": "Poloral",
+      "target": [ {
+        "code": "72093006",
+        "display": "Administration of vaccine product containing only Human poliovirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Rabique Mérieux",
+      "display": "Rabique Mérieux",
+      "target": [ {
+        "code": "34631000",
+        "display": "Administration of vaccine product containing only Rabies lyssavirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Rimevax",
+      "display": "Rimevax",
+      "target": [ {
+        "code": "47435007",
+        "display": "Administration of vaccine product containing only Measles morbillivirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Tetracoq",
+      "display": "Tetracoq",
+      "target": [ {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "39343008",
+        "display": "Administration of vaccine product containing only Bordetella pertussis antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      }, {
+        "code": "72093006",
+        "display": "Administration of vaccine product containing only Human poliovirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Tetramune",
+      "display": "Tetramune",
+      "target": [ {
+        "code": "127787002",
+        "display": "Administration of vaccine product containing only Haemophilus influenzae type B antigen (procedure)"
+      }, {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "39343008",
+        "display": "Administration of vaccine product containing only Bordetella pertussis antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      } ]
+    }, {
+      "code": "Tetanol pur",
+      "display": "Tetanol pur",
+      "target": [ {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      } ]
+    }, {
+      "code": "Vaqta",
+      "display": "Vaqta",
+      "target": [ {
+        "code": "243789007",
+        "display": "Administration of vaccine product containing only Hepatitis A virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Rubeaten",
+      "display": "Rubeaten",
+      "target": [ {
+        "code": "82314000",
+        "display": "Administration of vaccine product containing only Rubella virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Rudivax",
+      "display": "Rudivax",
+      "target": [ {
+        "code": "82314000",
+        "display": "Administration of vaccine product containing only Rubella virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Gardasil",
+      "display": "Gardasil",
+      "target": [ {
+        "code": "428570002"
+      } ]
+    }, {
+      "code": "Havrix 360",
+      "display": "Havrix 360",
+      "target": [ {
+        "code": "243789007",
+        "display": "Administration of vaccine product containing only Hepatitis A virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Zostavax",
+      "display": "Zostavax",
+      "target": [ {
+        "code": "4740000"
+      } ]
+    }, {
+      "code": "Almevax",
+      "display": "Almevax",
+      "target": [ {
+        "code": "82314000",
+        "display": "Administration of vaccine product containing only Rubella virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Hevac B",
+      "display": "Hevac B",
+      "target": [ {
+        "code": "16584000",
+        "display": "Administration of vaccine product containing only Hepatitis B virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "MMR-I",
+      "display": "MMR-I",
+      "target": [ {
+        "code": "82314000",
+        "display": "Administration of vaccine product containing only Rubella virus antigen (procedure)"
+      }, {
+        "code": "47435007",
+        "display": "Administration of vaccine product containing only Measles morbillivirus antigen (procedure)"
+      }, {
+        "code": "50583002",
+        "display": "Administration of vaccine product containing only Mumps orthorubulavirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Moruman",
+      "display": "Moruman",
+      "target": [ {
+        "code": "47435007",
+        "display": "Administration of vaccine product containing only Measles morbillivirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Rimparix",
+      "display": "Rimparix",
+      "target": [ {
+        "code": "47435007",
+        "display": "Administration of vaccine product containing only Measles morbillivirus antigen (procedure)"
+      }, {
+        "code": "50583002",
+        "display": "Administration of vaccine product containing only Mumps orthorubulavirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Rubevac",
+      "display": "Rubevac",
+      "target": [ {
+        "code": "82314000",
+        "display": "Administration of vaccine product containing only Rubella virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Trimovax",
+      "display": "Trimovax",
+      "target": [ {
+        "code": "82314000",
+        "display": "Administration of vaccine product containing only Rubella virus antigen (procedure)"
+      }, {
+        "code": "47435007",
+        "display": "Administration of vaccine product containing only Measles morbillivirus antigen (procedure)"
+      }, {
+        "code": "50583002",
+        "display": "Administration of vaccine product containing only Mumps orthorubulavirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Priorix-Tetra",
+      "display": "Priorix-Tetra",
+      "target": [ {
+        "code": "82314000",
+        "display": "Administration of vaccine product containing only Rubella virus antigen (procedure)"
+      }, {
+        "code": "47435007",
+        "display": "Administration of vaccine product containing only Measles morbillivirus antigen (procedure)"
+      }, {
+        "code": "50583002",
+        "display": "Administration of vaccine product containing only Mumps orthorubulavirus antigen (procedure)"
+      }, {
+        "code": "68525005"
+      } ]
+    }, {
+      "code": "BCG SSI",
+      "display": "BCG SSI",
+      "target": [ {
+        "code": "42284007",
+        "display": "Administration of vaccine product containing only live attenuated Mycobacterium bovis antigen (procedure)"
+      } ]
+    }, {
+      "code": "Ditanrix pediatric",
+      "display": "Ditanrix pediatric",
+      "target": [ {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      } ]
+    }, {
+      "code": "Eolarix",
+      "display": "Eolarix",
+      "target": [ {
+        "code": "82314000",
+        "display": "Administration of vaccine product containing only Rubella virus antigen (procedure)"
+      }, {
+        "code": "47435007",
+        "display": "Administration of vaccine product containing only Measles morbillivirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "FSME-Immun Injekt",
+      "display": "FSME-Immun Injekt",
+      "target": [ {
+        "code": "281658005",
+        "display": "Administration of vaccine product containing only Tick-borne encephalitis virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Fluad",
+      "display": "Fluad",
+      "target": [ {
+        "code": "86198006",
+        "display": "Administration of vaccine product containing only Influenza virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Rotarix",
+      "display": "Rotarix",
+      "target": [ {
+        "code": "18624000"
+      } ]
+    }, {
+      "code": "MMRVaxPro",
+      "display": "MMRVaxPro",
+      "target": [ {
+        "code": "82314000",
+        "display": "Administration of vaccine product containing only Rubella virus antigen (procedure)"
+      }, {
+        "code": "47435007",
+        "display": "Administration of vaccine product containing only Measles morbillivirus antigen (procedure)"
+      }, {
+        "code": "50583002",
+        "display": "Administration of vaccine product containing only Mumps orthorubulavirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Measles vaccine live",
+      "display": "Measles vaccine live",
+      "target": [ {
+        "code": "47435007",
+        "display": "Administration of vaccine product containing only Measles morbillivirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "ProHibit",
+      "display": "ProHibit",
+      "target": [ {
+        "code": "127787002",
+        "display": "Administration of vaccine product containing only Haemophilus influenzae type B antigen (procedure)"
+      } ]
+    }, {
+      "code": "Anatoxal DiTe Kinder",
+      "display": "Anatoxal DiTe Kinder",
+      "target": [ {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      } ]
+    }, {
+      "code": "Agrippal",
+      "display": "Agrippal",
+      "target": [ {
+        "code": "86198006",
+        "display": "Administration of vaccine product containing only Influenza virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Celtura",
+      "display": "Celtura",
+      "target": [ {
+        "code": "442696006"
+      } ]
+    }, {
+      "code": "Focetria",
+      "display": "Focetria",
+      "target": [ {
+        "code": "442696006"
+      } ]
+    }, {
+      "code": "K1, K2, K3",
+      "display": "K1, K2, K3",
+      "target": [ {
+        "code": "72093006",
+        "display": "Administration of vaccine product containing only Human poliovirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Koprowski",
+      "display": "Koprowski",
+      "target": [ {
+        "code": "72093006",
+        "display": "Administration of vaccine product containing only Human poliovirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Optaflu",
+      "display": "Optaflu",
+      "target": [ {
+        "code": "86198006",
+        "display": "Administration of vaccine product containing only Influenza virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Pandemrix",
+      "display": "Pandemrix",
+      "target": [ {
+        "code": "442696006"
+      } ]
+    }, {
+      "code": "Prohibit DTP",
+      "display": "Prohibit DTP",
+      "target": [ {
+        "code": "127787002",
+        "display": "Administration of vaccine product containing only Haemophilus influenzae type B antigen (procedure)"
+      }, {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "39343008",
+        "display": "Administration of vaccine product containing only Bordetella pertussis antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      } ]
+    }, {
+      "code": "TAB oral",
+      "display": "TAB oral",
+      "target": [ {
+        "code": "30338008"
+      } ]
+    }, {
+      "code": "Variola",
+      "display": "Variola",
+      "target": [ {
+        "code": "67924001"
+      } ]
+    }, {
+      "code": "Cervarix",
+      "display": "Cervarix",
+      "target": [ {
+        "code": "428570002"
+      } ]
+    }, {
+      "code": "Prevenar-13",
+      "display": "Prevenar-13",
+      "target": [ {
+        "code": "448964007"
+      } ]
+    }, {
+      "code": "Polio Koprowski (K1-K3)",
+      "display": "Polio Koprowski (K1-K3)",
+      "target": [ {
+        "code": "72093006",
+        "display": "Administration of vaccine product containing only Human poliovirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Polio Lilly",
+      "display": "Polio Lilly",
+      "target": [ {
+        "code": "72093006",
+        "display": "Administration of vaccine product containing only Human poliovirus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Ixiaro",
+      "display": "Ixiaro",
+      "target": [ {
+        "code": "314759000",
+        "display": "Administration of vaccine product containing only Japanese encephalitis virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Menveo",
+      "display": "Menveo",
+      "target": [ {
+        "code": "41088001",
+        "display": "Administration of vaccine product containing only Neisseria meningitidis antigen (procedure)"
+      }, {
+        "code": "390892002"
+      } ]
+    }, {
+      "code": "Di Anatoxal",
+      "display": "Di Anatoxal",
+      "target": [ {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      } ]
+    }, {
+      "code": "DiTe Anatoxal Erwachsene / Adultes",
+      "display": "DiTe Anatoxal Erwachsene / Adultes",
+      "target": [ {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      } ]
+    }, {
+      "code": "DiTe Anatoxal N Erwachsene / Adultes",
+      "display": "DiTe Anatoxal N Erwachsene / Adultes",
+      "target": [ {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      } ]
+    }, {
+      "code": "DiTe Anatoxal Kinder / Enfants",
+      "display": "DiTe Anatoxal Kinder / Enfants",
+      "target": [ {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      } ]
+    }, {
+      "code": "DiTePer Anatoxal",
+      "display": "DiTePer Anatoxal",
+      "target": [ {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "39343008",
+        "display": "Administration of vaccine product containing only Bordetella pertussis antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      } ]
+    }, {
+      "code": "Te Anatoxal",
+      "display": "Te Anatoxal",
+      "target": [ {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      } ]
+    }, {
+      "code": "Te Anatoxal N",
+      "display": "Te Anatoxal N",
+      "target": [ {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      } ]
+    }, {
+      "code": "Encepur",
+      "display": "Encepur",
+      "target": [ {
+        "code": "281658005",
+        "display": "Administration of vaccine product containing only Tick-borne encephalitis virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Encepur Kinder / Enfants",
+      "display": "Encepur Kinder / Enfants",
+      "target": [ {
+        "code": "281658005",
+        "display": "Administration of vaccine product containing only Tick-borne encephalitis virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "HBVAX DNA 5",
+      "display": "HBVAX DNA 5",
+      "target": [ {
+        "code": "16584000",
+        "display": "Administration of vaccine product containing only Hepatitis B virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "HBVAX DNA 10",
+      "display": "HBVAX DNA 10",
+      "target": [ {
+        "code": "16584000",
+        "display": "Administration of vaccine product containing only Hepatitis B virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "HBVAX DNA 40",
+      "display": "HBVAX DNA 40",
+      "target": [ {
+        "code": "16584000",
+        "display": "Administration of vaccine product containing only Hepatitis B virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Havrix junior",
+      "display": "Havrix junior",
+      "target": [ {
+        "code": "243789007",
+        "display": "Administration of vaccine product containing only Hepatitis A virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Infanrix",
+      "display": "Infanrix",
+      "target": [ {
+        "code": "76668005",
+        "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)"
+      }, {
+        "code": "39343008",
+        "display": "Administration of vaccine product containing only Bordetella pertussis antigen (procedure)"
+      }, {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      } ]
+    }, {
+      "code": "Tanrix",
+      "display": "Tanrix",
+      "target": [ {
+        "code": "127786006",
+        "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)"
+      } ]
+    }, {
+      "code": "Vaccin variole",
+      "display": "Vaccin variole",
+      "target": [ {
+        "code": "67924001"
+      } ]
+    }, {
+      "code": "Engerix-B 40",
+      "display": "Engerix-B 40",
+      "target": [ {
+        "code": "16584000",
+        "display": "Administration of vaccine product containing only Hepatitis B virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Fluarix Tetra",
+      "display": "Fluarix Tetra",
+      "target": [ {
+        "code": "86198006",
+        "display": "Administration of vaccine product containing only Influenza virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "Hepavax",
+      "display": "Hepavax",
+      "target": [ {
+        "code": "16584000",
+        "display": "Administration of vaccine product containing only Hepatitis B virus antigen (procedure)"
+      } ]
+    }, {
+      "code": "COVID-19 Vaccine (Moderna)",
+      "display": "COVID-19 Vaccine (Moderna)",
+      "target": [ {
+        "code": "840534001",
+        "display": "Administration of vaccine product containing only Severe acute respiratory syndrome coronavirus 2 antigen (procedure)"
+      } ]
+    }, {
+      "code": "COMIRNATY (Pfizer)",
+      "display": "COMIRNATY (Pfizer)",
+      "target": [ {
+        "code": "840534001",
+        "display": "Administration of vaccine product containing only Severe acute respiratory syndrome coronavirus 2 antigen (procedure)"
+      } ]
+    } ]
+  } ]
+}

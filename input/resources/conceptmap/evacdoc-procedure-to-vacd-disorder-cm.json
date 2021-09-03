@@ -1,0 +1,225 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "evacdoc-procedure-to-vacd-disorder-cm",
+  "url": "http://fhir.ch/ig/evacdoc-fhir-maps/ConceptMap/evacdoc-procedure-to-vacd-disorder-cm",
+  "version": "0.1.0",
+  "name": "eVacDocDiseaseSnomedCTProceduretoCHVACDDisorderMap",
+  "title": "eVacDoc Disease SnomedCT Procedure to ch-vacd SnomedCT Disorder Map",
+  "publisher": "RALY GmbH",
+  "contact": [ {
+    "name": "RALY GmbH",
+    "telecom": [ {
+      "system": "url",
+      "value": "https://www.raly.ch/"
+    } ]
+  } ],
+  "sourceUri": "http://fhir.ch/ig/ch-vacd/ValueSet/ch-vacd-targetdiseasesandillnessesundergoneforimmunization-vs",
+  "targetUri": "http://fhir.ch/ig/ch-vacd/ValueSet/ch-vacd-ch-vaccination-plan-immunizations-vs",
+  "group": [ {
+    "source": "http://snomed.info/sct",
+    "target": "http://snomed.info/sct",
+    "element": [ {
+      "id": "1",
+      "code": "76668005",
+      "display": "Administration of vaccine product containing only Corynebacterium diphtheriae antigen (procedure)",
+      "target": [ {
+        "code": "397430003",
+        "display": "Diphtheria caused by Corynebacterium diphtheriae (disorder)"
+      } ]
+    }, {
+      "id": "2",
+      "code": "127786006",
+      "display": "Administration of vaccine product containing only Clostridium tetani antigen (procedure)",
+      "target": [ {
+        "code": "76902006",
+        "display": "Tetanus (disorder)"
+      } ]
+    }, {
+      "id": "3",
+      "code": "39343008",
+      "display": "Administration of vaccine product containing only Bordetella pertussis antigen (procedure)",
+      "target": [ {
+        "code": "27836007",
+        "display": "Pertussis (disorder)"
+      } ]
+    }, {
+      "id": "4",
+      "code": "72093006",
+      "display": "Administration of vaccine product containing only Human poliovirus antigen (procedure)",
+      "target": [ {
+        "code": "398102009",
+        "display": "Acute poliomyelitis (disorder)"
+      } ]
+    }, {
+      "id": "5",
+      "code": "127787002",
+      "display": "Administration of vaccine product containing only Haemophilus influenzae type B antigen (procedure)",
+      "target": [ {
+        "code": "709410003",
+        "display": "Haemophilus influenzae type b infection (disorder)"
+      } ]
+    }, {
+      "id": "6",
+      "code": "243789007",
+      "display": "Administration of vaccine product containing only Hepatitis A virus antigen (procedure)",
+      "target": [ {
+        "code": "40468003",
+        "display": "Viral hepatitis, type A (disorder)"
+      } ]
+    }, {
+      "id": "7",
+      "code": "16584000",
+      "display": "Administration of vaccine product containing only Hepatitis B virus antigen (procedure)",
+      "target": [ {
+        "code": "66071002",
+        "display": "Viral hepatitis type B (disorder)"
+      } ]
+    }, {
+      "id": "8",
+      "code": "47435007",
+      "display": "Administration of vaccine product containing only Measles morbillivirus antigen (procedure)",
+      "target": [ {
+        "code": "14189004",
+        "display": "Measles (disorder)"
+      } ]
+    }, {
+      "id": "9",
+      "code": "50583002",
+      "display": "Administration of vaccine product containing only Mumps orthorubulavirus antigen (procedure)",
+      "target": [ {
+        "code": "36989005",
+        "display": "Mumps (disorder)"
+      } ]
+    }, {
+      "id": "10",
+      "code": "82314000",
+      "display": "Administration of vaccine product containing only Rubella virus antigen (procedure)",
+      "target": [ {
+        "code": "36653000",
+        "display": "Rubella (disorder)"
+      } ]
+    }, {
+      "id": "11",
+      "code": "281658005",
+      "display": "Administration of vaccine product containing only Tick-borne encephalitis virus antigen (procedure)",
+      "target": [ {
+        "code": "16901001",
+        "display": "Central European encephalitis (disorder)"
+      } ]
+    }, {
+      "id": "12",
+      "code": "41088001",
+      "display": "Administration of vaccine product containing only Neisseria meningitidis antigen (procedure)",
+      "target": [ {
+        "code": "860805006",
+        "display": "Encephalomyelitis caused by Neisseria meningitidis (disorder)"
+      } ]
+    }, {
+      "id": "13",
+      "code": "86198006",
+      "display": "Administration of vaccine product containing only Influenza virus antigen (procedure)",
+      "target": [ {
+        "code": "719590007",
+        "display": "Influenza caused by seasonal influenza virus (disorder)"
+      } ]
+    }, {
+      "id": "14",
+      "code": "28877009",
+      "target": [ {
+        "code": "63650001",
+        "display": "Cholera (disorder)"
+      } ]
+    }, {
+      "id": "15",
+      "code": "34631000",
+      "display": "Administration of vaccine product containing only Rabies lyssavirus antigen (procedure)",
+      "target": [ {
+        "code": "14168008",
+        "display": "Rabies (disorder)"
+      } ]
+    }, {
+      "id": "16",
+      "code": "30338008",
+      "target": [ {
+        "code": "4834000",
+        "display": "Typhoid fever (disorder)"
+      } ]
+    }, {
+      "id": "17",
+      "code": "68525005",
+      "target": [ {
+        "code": "38907003",
+        "display": "Varicella (disorder)"
+      } ]
+    }, {
+      "id": "19",
+      "code": "42284007",
+      "display": "Administration of vaccine product containing only live attenuated Mycobacterium bovis antigen (procedure)",
+      "target": [ {
+        "code": "56717001",
+        "display": "Tuberculosis (disorder)"
+      } ]
+    }, {
+      "id": "20",
+      "code": "67308009",
+      "display": "Administration of vaccine product containing only Yellow fever virus antigen (procedure)",
+      "target": [ {
+        "code": "16541001",
+        "display": "Yellow fever (disorder)"
+      } ]
+    }, {
+      "id": "26",
+      "code": "428570002",
+      "target": [ {
+        "code": "407458009"
+      } ]
+    }, {
+      "id": "27",
+      "code": "116394005",
+      "target": [ {
+        "code": "71057007"
+      } ]
+    }, {
+      "id": "28",
+      "code": "4740000",
+      "target": [ {
+        "code": "4740000"
+      } ]
+    }, {
+      "id": "29",
+      "code": "18624000",
+      "target": [ {
+        "code": "18624000",
+        "display": "Disease caused by Rotavirus (disorder)"
+      } ]
+    }, {
+      "id": "30",
+      "code": "442696006",
+      "target": [ {
+        "code": "442438000"
+      } ]
+    }, {
+      "id": "31",
+      "code": "67924001",
+      "target": [ {
+        "code": "67924001"
+      } ]
+    }, {
+      "id": "32",
+      "code": "314759000",
+      "display": "Administration of vaccine product containing only Japanese encephalitis virus antigen (procedure)",
+      "target": [ {
+        "code": "52947006",
+        "display": "Japanese encephalitis virus disease (disorder)"
+      } ]
+    }, {
+      "id": "33",
+      "code": "840534001",
+      "display": "Administration of vaccine product containing only Severe acute respiratory syndrome coronavirus 2 antigen (procedure)",
+      "target": [ {
+        "code": "840539006",
+        "display": "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
+      } ]
+    } ]
+  } ]
+}

@@ -1,0 +1,2587 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "evacdoc-vaccine-to-vacd-vaccine-cm",
+  "url": "http://fhir.ch/ig/evacdoc-fhir-maps/ConceptMap/evacdoc-vaccine-to-vacd-vaccine-cm",
+  "version": "0.1.0",
+  "name": "eVacDocVaccineToCHVACDVaccineConceptMap",
+  "title": "eVacDoc Vaccine to ch-vacd Vaccine Concept Map",
+  "publisher": "RALY GmbH",
+  "contact": [ {
+    "name": "RALY GmbH",
+    "telecom": [ {
+      "system": "url",
+      "value": "https://www.raly.ch/"
+    } ]
+  } ],
+  "sourceUri": "http://fhir.ch/ig/evacdoc-fhir-maps/ValueSet/evacdoc-vaccines-vs",
+  "targetUri": "http://fhir.ch/ig/ch-vacd/ValueSet/ch-vacd-vaccines-vs",
+  "group": [ {
+    "source": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+    "target": "http://fhir.ch/ig/ch-vacd/CodeSystem/ch-vacd-swissmedic-cs",
+    "element": [ {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "1|J07BA01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "FSME-Immun 0.25 ml Junior",
+          "display": "FSME-Immun 0.25 ml Junior"
+        }
+      } ],
+      "code": "FSME-Immun 0.25 ml Junior",
+      "display": "FSME-Immun 0.25 ml Junior",
+      "target": [ {
+        "code": "683",
+        "display": "FSME-Immun 0.25 ml Junior"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "2|J07BA01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "FSME-Immun CC",
+          "display": "FSME-Immun CC"
+        }
+      } ],
+      "code": "FSME-Immun CC",
+      "display": "FSME-Immun CC",
+      "target": [ {
+        "code": "450",
+        "display": "FSME-Immun CC"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "3|J07AH07",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "NeisVac-C",
+          "display": "NeisVac-C"
+        }
+      } ],
+      "code": "NeisVac-C",
+      "display": "NeisVac-C",
+      "target": [ {
+        "code": "656",
+        "display": "NeisVac-C"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "6|J07BA01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Encepur N",
+          "display": "Encepur N"
+        }
+      } ],
+      "code": "Encepur N",
+      "display": "Encepur N",
+      "target": [ {
+        "code": "627",
+        "display": "Encepur N"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "7|J07BA01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Encepur N Kinder / Enfants",
+          "display": "Encepur N Kinder / Enfants"
+        }
+      } ],
+      "code": "Encepur N Kinder / Enfants",
+      "display": "Encepur N Kinder / Enfants",
+      "target": [ {
+        "code": "628",
+        "display": "Encepur N Kinder / Enfants"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "8|J07BC02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Epaxal",
+          "display": "Epaxal"
+        }
+      } ],
+      "code": "Epaxal",
+      "display": "Epaxal",
+      "target": [ {
+        "code": "572",
+        "display": "Epaxal"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "9|J07BC01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Heprecomb",
+          "display": "Heprecomb"
+        }
+      } ],
+      "code": "Heprecomb",
+      "display": "Heprecomb",
+      "target": [ {
+        "code": "544",
+        "display": "Heprecomb"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "10|J07BC01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Heprecomb Kinder",
+          "display": "Heprecomb Kinder"
+        }
+      } ],
+      "code": "Heprecomb Kinder",
+      "display": "Heprecomb Kinder",
+      "target": [ {
+        "code": "642",
+        "display": "Heprecomb Kinder"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "11|J07BB02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Inflexal V",
+          "display": "Inflexal V"
+        }
+      } ],
+      "code": "Inflexal V",
+      "display": "Inflexal V",
+      "target": [ {
+        "code": "614",
+        "display": "Inflexal V"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "12|J07AH07",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Menjugate",
+          "display": "Menjugate"
+        }
+      } ],
+      "code": "Menjugate",
+      "display": "Menjugate",
+      "target": [ {
+        "code": "657",
+        "display": "Menjugate"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "13|J07BD01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Moraten",
+          "display": "Moraten"
+        }
+      } ],
+      "code": "Moraten",
+      "display": "Moraten",
+      "target": [ {
+        "code": "533",
+        "display": "Moraten"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "15|J07AE02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Orochol",
+          "display": "Orochol"
+        }
+      } ],
+      "code": "Orochol",
+      "display": "Orochol",
+      "target": [ {
+        "code": "555",
+        "display": "Orochol"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "18|J07BG01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Rabipur",
+          "display": "Rabipur"
+        }
+      } ],
+      "code": "Rabipur",
+      "display": "Rabipur",
+      "target": [ {
+        "code": "685",
+        "display": "Rabipur"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "19|J07AM51",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Td-pur",
+          "display": "Td-pur"
+        }
+      } ],
+      "code": "Td-pur",
+      "display": "Td-pur",
+      "target": [ {
+        "code": "702",
+        "display": "Td-pur"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "20|J07CA01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Td-Virelon",
+          "display": "Td-Virelon"
+        }
+      } ],
+      "code": "Td-Virelon",
+      "display": "Td-Virelon",
+      "target": [ {
+        "code": "686",
+        "display": "Td-Virelon"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "24|J07AP01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Vivotif",
+          "display": "Vivotif"
+        }
+      } ],
+      "code": "Vivotif",
+      "display": "Vivotif",
+      "target": [ {
+        "code": "467",
+        "display": "Vivotif"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "26|J07AJ52",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Boostrix",
+          "display": "Boostrix"
+        }
+      } ],
+      "code": "Boostrix",
+      "display": "Boostrix",
+      "target": [ {
+        "code": "637",
+        "display": "Boostrix"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "27|J07CA02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Boostrix Polio",
+          "display": "Boostrix Polio"
+        }
+      } ],
+      "code": "Boostrix Polio",
+      "display": "Boostrix Polio",
+      "target": [ {
+        "code": "681",
+        "display": "Boostrix Polio"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "28|J07AM51",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Ditanrix",
+          "display": "Ditanrix"
+        }
+      } ],
+      "code": "Ditanrix",
+      "display": "Ditanrix",
+      "target": [ {
+        "code": "567",
+        "display": "Ditanrix"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "29|J07BC01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Engerix-B 10",
+          "display": "Engerix-B 10"
+        }
+      } ],
+      "code": "Engerix-B 10",
+      "display": "Engerix-B 10",
+      "target": [ {
+        "code": "551",
+        "display": "Engerix-B 10"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "30|J07BC01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Engerix-B 20",
+          "display": "Engerix-B 20"
+        }
+      } ],
+      "code": "Engerix-B 20",
+      "display": "Engerix-B 20",
+      "target": [ {
+        "code": "534",
+        "display": "Engerix-B 20"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "31|J07BB02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Fluarix",
+          "display": "Fluarix"
+        }
+      } ],
+      "code": "Fluarix",
+      "display": "Fluarix",
+      "target": [ {
+        "code": "583",
+        "display": "Fluarix"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "32|J07BC02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Havrix 1440",
+          "display": "Havrix 1440"
+        }
+      } ],
+      "code": "Havrix 1440",
+      "display": "Havrix 1440",
+      "target": [ {
+        "code": "558",
+        "display": "Havrix 1440"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "33|J07BC02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Havrix 720",
+          "display": "Havrix 720"
+        }
+      } ],
+      "code": "Havrix 720",
+      "display": "Havrix 720",
+      "target": [ {
+        "code": "599",
+        "display": "Havrix 720"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "34|J07AG01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Hiberix",
+          "display": "Hiberix"
+        }
+      } ],
+      "code": "Hiberix",
+      "display": "Hiberix",
+      "target": [ {
+        "code": "603",
+        "display": "Hiberix"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "36|J07CA02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Infanrix DTPa-IPV",
+          "display": "Infanrix DTPa-IPV"
+        }
+      } ],
+      "code": "Infanrix DTPa-IPV",
+      "display": "Infanrix DTPa-IPV",
+      "target": [ {
+        "code": "638",
+        "display": "Infanrix (DTPa-IPV)"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "37|J07CA06",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Infanrix DTPa-IPV+Hib",
+          "display": "Infanrix DTPa-IPV+Hib"
+        }
+      } ],
+      "code": "Infanrix DTPa-IPV+Hib",
+      "display": "Infanrix DTPa-IPV+Hib",
+      "target": [ {
+        "code": "619",
+        "display": "Infanrix (DTPa-IPV+Hib)"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "38|J07CA09",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Infanrix hexa",
+          "display": "Infanrix hexa"
+        }
+      } ],
+      "code": "Infanrix hexa",
+      "display": "Infanrix hexa",
+      "target": [ {
+        "code": "640",
+        "display": "Infanrix hexa (DTPa-HBV-IPV+Hib)"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "40|J07AH04",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Mencevax ACWY",
+          "display": "Mencevax ACWY"
+        }
+      } ],
+      "code": "Mencevax ACWY",
+      "display": "Mencevax ACWY",
+      "target": [ {
+        "code": "652",
+        "display": "Mencevax ACWY"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "41|J07BF03",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Poliorix",
+          "display": "Poliorix"
+        }
+      } ],
+      "code": "Poliorix",
+      "display": "Poliorix",
+      "target": [ {
+        "code": "669",
+        "display": "Poliorix"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "42|J07BD52",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Priorix",
+          "display": "Priorix"
+        }
+      } ],
+      "code": "Priorix",
+      "display": "Priorix",
+      "target": [ {
+        "code": "615",
+        "display": "Priorix"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "43|J07BC20",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Twinrix 720/20",
+          "display": "Twinrix 720/20"
+        }
+      } ],
+      "code": "Twinrix 720/20",
+      "display": "Twinrix 720/20",
+      "target": [ {
+        "code": "592",
+        "display": "Twinrix 720/20"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "44|J07BK01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Varilrix",
+          "display": "Varilrix"
+        }
+      } ],
+      "code": "Varilrix",
+      "display": "Varilrix",
+      "target": [ {
+        "code": "585",
+        "display": "Varilrix"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "49|J07BC01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Gen H-B-Vax 10",
+          "display": "Gen H-B-Vax 10"
+        }
+      } ],
+      "code": "Gen H-B-Vax 10",
+      "display": "Gen H-B-Vax 10",
+      "target": [ {
+        "code": "528",
+        "display": "Gen H-B-Vax 10"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "50|J07BC01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "HBVAXPRO 40",
+          "display": "HBVAXPRO 40"
+        }
+      } ],
+      "code": "HBVAXPRO 40",
+      "display": "HBVAXPRO 40",
+      "target": [ {
+        "code": "545",
+        "display": "HBVAXPRO 40"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "51|J07BC01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Gen H-B-Vax 5",
+          "display": "Gen H-B-Vax 5"
+        }
+      } ],
+      "code": "Gen H-B-Vax 5",
+      "display": "Gen H-B-Vax 5",
+      "target": [ {
+        "code": "610",
+        "display": "Gen H-B-Vax 5"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "52|J07BC01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "HBVAXPRO 10",
+          "display": "HBVAXPRO 10"
+        }
+      } ],
+      "code": "HBVAXPRO 10",
+      "display": "HBVAXPRO 10",
+      "target": [ {
+        "code": "663",
+        "display": "HBVAXPRO 10"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "54|J07BD52",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "MMR-II",
+          "display": "MMR-II"
+        }
+      } ],
+      "code": "MMR-II",
+      "display": "MMR-II",
+      "target": [ {
+        "code": "268",
+        "display": "MMR-II"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "57|J07BE01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Mumpsvax",
+          "display": "Mumpsvax"
+        }
+      } ],
+      "code": "Mumpsvax",
+      "display": "Mumpsvax",
+      "target": [ {
+        "code": "247",
+        "display": "Mumpsvax"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "58|J07BB02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Mutagrip",
+          "display": "Mutagrip"
+        }
+      } ],
+      "code": "Mutagrip",
+      "display": "Mutagrip",
+      "target": [ {
+        "code": "373",
+        "display": "Mutagrip"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "59|J07CA06",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Pentavac",
+          "display": "Pentavac"
+        }
+      } ],
+      "code": "Pentavac",
+      "display": "Pentavac",
+      "target": [ {
+        "code": "613",
+        "display": "Pentavac"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "60|J07AL01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Pneumovax-23",
+          "display": "Pneumovax-23"
+        }
+      } ],
+      "code": "Pneumovax-23",
+      "display": "Pneumovax-23",
+      "target": [ {
+        "code": "509",
+        "display": "Pneumovax-23"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "61|J07CA01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Revaxis",
+          "display": "Revaxis"
+        }
+      } ],
+      "code": "Revaxis",
+      "display": "Revaxis",
+      "target": [ {
+        "code": "646",
+        "display": "Revaxis"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "62|J07BL01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Stamaril",
+          "display": "Stamaril"
+        }
+      } ],
+      "code": "Stamaril",
+      "display": "Stamaril",
+      "target": [ {
+        "code": "520",
+        "display": "Stamaril"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "63|J07CA02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Tetravac",
+          "display": "Tetravac"
+        }
+      } ],
+      "code": "Tetravac",
+      "display": "Tetravac",
+      "target": [ {
+        "code": "612",
+        "display": "Tetravac"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "64|J07BG01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Tollwut Impfstoff Mérieux",
+          "display": "Tollwut Impfstoff Mérieux"
+        }
+      } ],
+      "code": "Tollwut Impfstoff Mérieux",
+      "display": "Tollwut Impfstoff Mérieux",
+      "target": [ {
+        "code": "417",
+        "display": "Tollwut Impfstoff Mérieux"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "65|J07BK01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Varivax",
+          "display": "Varivax"
+        }
+      } ],
+      "code": "Varivax",
+      "display": "Varivax",
+      "target": [ {
+        "code": "688",
+        "display": "Varivax"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "66|J07BB02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Influvac",
+          "display": "Influvac"
+        }
+      } ],
+      "code": "Influvac",
+      "display": "Influvac",
+      "target": [ {
+        "code": "485",
+        "display": "Influvac"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "67|J07BB02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Influvac plus",
+          "display": "Influvac plus"
+        }
+      } ],
+      "code": "Influvac plus",
+      "display": "Influvac plus",
+      "target": [ {
+        "code": "660",
+        "display": "Influvac plus"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "70|J07AH07",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Meningitec",
+          "display": "Meningitec"
+        }
+      } ],
+      "code": "Meningitec",
+      "display": "Meningitec",
+      "target": [ {
+        "code": "654",
+        "display": "Meningitec"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "71|J07AL02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Prevenar-7",
+          "display": "Prevenar-7"
+        }
+      } ],
+      "code": "Prevenar-7",
+      "display": "Prevenar-7",
+      "target": [ {
+        "code": "643",
+        "display": "Prevenar-7"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "72|J07CA09",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Hexavac",
+          "display": "Hexavac"
+        }
+      } ],
+      "code": "Hexavac",
+      "display": "Hexavac",
+      "target": [ {
+        "code": "644",
+        "display": "Hexavac"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "89|J07AM51",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "DiTe pediatric adsorbed",
+          "display": "DiTe pediatric adsorbed"
+        }
+      } ],
+      "code": "DiTe pediatric adsorbed",
+      "display": "DiTe pediatric adsorbed",
+      "target": [ {
+        "code": "711",
+        "display": "DiTe pediatric adsorbed"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "90|J07AE01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Dukoral",
+          "display": "Dukoral"
+        }
+      } ],
+      "code": "Dukoral",
+      "display": "Dukoral",
+      "target": [ {
+        "code": "704",
+        "display": "Dukoral"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "104|J07BG01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Rabique Mérieux",
+          "display": "Rabique Mérieux"
+        }
+      } ],
+      "code": "Rabique Mérieux",
+      "display": "Rabique Mérieux",
+      "target": [ {
+        "code": "417",
+        "display": "Tollwut Impfstoff Mérieux"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "105|J07BD01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Rimevax",
+          "display": "Rimevax"
+        }
+      } ],
+      "code": "Rimevax",
+      "display": "Rimevax",
+      "target": [ {
+        "code": "483",
+        "display": "Rimevax"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "108|J07AM01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Tetanol pur",
+          "display": "Tetanol pur"
+        }
+      } ],
+      "code": "Tetanol pur",
+      "display": "Tetanol pur",
+      "target": [ {
+        "code": "707",
+        "display": "Tetanol pur"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "113|J07BM01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Gardasil",
+          "display": "Gardasil"
+        }
+      } ],
+      "code": "Gardasil",
+      "display": "Gardasil",
+      "target": [ {
+        "code": "57735",
+        "display": "Gardasil"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "116|J07BK02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Zostavax",
+          "display": "Zostavax"
+        }
+      } ],
+      "code": "Zostavax",
+      "display": "Zostavax",
+      "target": [ {
+        "code": "709",
+        "display": "Zostavax"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "124|J07BD54",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Priorix-Tetra",
+          "display": "Priorix-Tetra"
+        }
+      } ],
+      "code": "Priorix-Tetra",
+      "display": "Priorix-Tetra",
+      "target": [ {
+        "code": "58158",
+        "display": "Priorix-Tetra"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "125|J07AN01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "BCG SSI",
+          "display": "BCG SSI"
+        }
+      } ],
+      "code": "BCG SSI",
+      "display": "BCG SSI",
+      "target": [ {
+        "code": "696",
+        "display": "BCG SSI"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "129|J07BB02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Fluad",
+          "display": "Fluad"
+        }
+      } ],
+      "code": "Fluad",
+      "display": "Fluad",
+      "target": [ {
+        "code": "58317",
+        "display": "Fluad"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "130|J07BH01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Rotarix",
+          "display": "Rotarix"
+        }
+      } ],
+      "code": "Rotarix",
+      "display": "Rotarix",
+      "target": [ {
+        "code": "60150",
+        "display": "Rotarix"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "131|J07BD52",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "MMRVaxPro",
+          "display": "MMRVaxPro"
+        }
+      } ],
+      "code": "MMRVaxPro",
+      "display": "MMRVaxPro",
+      "target": [ {
+        "code": "703",
+        "display": "MMRVaxPro"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "132|J07BD01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Measles vaccine live",
+          "display": "Measles vaccine live"
+        }
+      } ],
+      "code": "Measles vaccine live",
+      "display": "Measles vaccine live",
+      "target": [ {
+        "code": "58506",
+        "display": "Measles vaccine live"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "135|J07BB02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Agrippal",
+          "display": "Agrippal"
+        }
+      } ],
+      "code": "Agrippal",
+      "display": "Agrippal",
+      "target": [ {
+        "code": "59267",
+        "display": "Agrippal"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "140|J07BB02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Optaflu",
+          "display": "Optaflu"
+        }
+      } ],
+      "code": "Optaflu",
+      "display": "Optaflu",
+      "target": [ {
+        "code": "58271",
+        "display": "Optaflu"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "145|J07BM02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Cervarix",
+          "display": "Cervarix"
+        }
+      } ],
+      "code": "Cervarix",
+      "display": "Cervarix",
+      "target": [ {
+        "code": "57814",
+        "display": "Cervarix"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "146|J07AL02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Prevenar-13",
+          "display": "Prevenar-13"
+        }
+      } ],
+      "code": "Prevenar-13",
+      "display": "Prevenar-13",
+      "target": [ {
+        "code": "60129",
+        "display": "Prevenar-13"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "149|J07BA02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Ixiaro",
+          "display": "Ixiaro"
+        }
+      } ],
+      "code": "Ixiaro",
+      "display": "Ixiaro",
+      "target": [ {
+        "code": "59147",
+        "display": "Ixiaro"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "150|J07AH08",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Menveo",
+          "display": "Menveo"
+        }
+      } ],
+      "code": "Menveo",
+      "display": "Menveo",
+      "target": [ {
+        "code": "62502",
+        "display": "Menveo"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "152|J07AM51",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "DiTe Anatoxal Erwachsene / Adultes",
+          "display": "DiTe Anatoxal Erwachsene / Adultes"
+        }
+      } ],
+      "code": "DiTe Anatoxal Erwachsene / Adultes",
+      "display": "DiTe Anatoxal Erwachsene / Adultes",
+      "target": [ {
+        "code": "600",
+        "display": "DiTe Anatoxal Erwachsene / Adultes"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "153|J07AM51",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "DiTe Anatoxal N Erwachsene / Adultes",
+          "display": "DiTe Anatoxal N Erwachsene / Adultes"
+        }
+      } ],
+      "code": "DiTe Anatoxal N Erwachsene / Adultes",
+      "display": "DiTe Anatoxal N Erwachsene / Adultes",
+      "target": [ {
+        "code": "690",
+        "display": "DiTe Anatoxal N Erwachsene / Adultes"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "156|J07AM01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Te Anatoxal",
+          "display": "Te Anatoxal"
+        }
+      } ],
+      "code": "Te Anatoxal",
+      "display": "Te Anatoxal",
+      "target": [ {
+        "code": "35",
+        "display": "Te Anatoxal"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "157|J07AM01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Te Anatoxal N",
+          "display": "Te Anatoxal N"
+        }
+      } ],
+      "code": "Te Anatoxal N",
+      "display": "Te Anatoxal N",
+      "target": [ {
+        "code": "689",
+        "display": "Te Anatoxal N"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "158|J07BA01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Encepur",
+          "display": "Encepur"
+        }
+      } ],
+      "code": "Encepur",
+      "display": "Encepur",
+      "target": [ {
+        "code": "627",
+        "display": "Encepur N"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "159|J07BA01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Encepur Kinder / Enfants",
+          "display": "Encepur Kinder / Enfants"
+        }
+      } ],
+      "code": "Encepur Kinder / Enfants",
+      "display": "Encepur Kinder / Enfants",
+      "target": [ {
+        "code": "628",
+        "display": "Encepur N Kinder / Enfants"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "171|J07BB02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Fluarix Tetra",
+          "display": "Fluarix Tetra"
+        }
+      } ],
+      "code": "Fluarix Tetra",
+      "display": "Fluarix Tetra",
+      "target": [ {
+        "code": "62961",
+        "display": "Fluarix Tetra"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "173|J07BX03",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "COVID-19 Vaccine (Moderna)",
+          "display": "COVID-19 Vaccine (Moderna)"
+        }
+      } ],
+      "code": "COVID-19 Vaccine (Moderna)",
+      "display": "COVID-19 Vaccine (Moderna)",
+      "target": [ {
+        "code": "68267",
+        "display": "COVID-19 Vaccine (Moderna)"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "174|J07BX03",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "COMIRNATY (Pfizer)",
+          "display": "COMIRNATY (Pfizer)"
+        }
+      } ],
+      "code": "COMIRNATY (Pfizer)",
+      "display": "COMIRNATY (Pfizer)",
+      "target": [ {
+        "code": "68225",
+        "display": "COMIRNATY (Pfizer)"
+      } ]
+    } ]
+  }, {
+    "source": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+    "target": "http://fhir.ch/ig/ch-vacd/CodeSystem/ch-vacd-myvaccines-cs",
+    "element": [ {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "14|J07BD53",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "MoRu-Viraten",
+          "display": "MoRu-Viraten"
+        }
+      } ],
+      "code": "MoRu-Viraten",
+      "display": "MoRu-Viraten",
+      "target": [ {
+        "code": "14",
+        "display": "MoRu-Viraten"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "16|J07AE02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Orochol E",
+          "display": "Orochol E"
+        }
+      } ],
+      "code": "Orochol E",
+      "display": "Orochol E",
+      "target": [ {
+        "code": "16",
+        "display": "Orochol E"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "17|J07BF03",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Poliomyelitis Impfstoff Berna",
+          "display": "Poliomyelitis Impfstoff Berna"
+        }
+      } ],
+      "code": "Poliomyelitis Impfstoff Berna",
+      "display": "Poliomyelitis Impfstoff Berna",
+      "target": [ {
+        "code": "17",
+        "display": "Poliomyelitis Impfstoff Berna"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "23|J07BD52",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Triviraten",
+          "display": "Triviraten"
+        }
+      } ],
+      "code": "Triviraten",
+      "display": "Triviraten",
+      "target": [ {
+        "code": "23",
+        "display": "Triviraten"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "25|J07AP01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Vivotif L",
+          "display": "Vivotif L"
+        }
+      } ],
+      "code": "Vivotif L",
+      "display": "Vivotif L",
+      "target": [ {
+        "code": "25",
+        "display": "Vivotif L"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "35|J07AJ52",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Infanrix DTPa",
+          "display": "Infanrix DTPa"
+        }
+      } ],
+      "code": "Infanrix DTPa",
+      "display": "Infanrix DTPa",
+      "target": [ {
+        "code": "35",
+        "display": "Infanrix DTPa"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "39|J07CA06",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Infanrix Penta",
+          "display": "Infanrix Penta"
+        }
+      } ],
+      "code": "Infanrix Penta",
+      "display": "Infanrix Penta",
+      "target": [ {
+        "code": "39",
+        "display": "Infanrix Penta"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "47|J07BD01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Attenuvax",
+          "display": "Attenuvax"
+        }
+      } ],
+      "code": "Attenuvax",
+      "display": "Attenuvax",
+      "target": [ {
+        "code": "47",
+        "display": "Attenuvax"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "48|J07AN01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "BCG",
+          "display": "BCG"
+        }
+      } ],
+      "code": "BCG",
+      "display": "BCG",
+      "target": [ {
+        "code": "48",
+        "display": "BCG"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "53|J07BC01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "HBVAXPRO 5",
+          "display": "HBVAXPRO 5"
+        }
+      } ],
+      "code": "HBVAXPRO 5",
+      "display": "HBVAXPRO 5",
+      "target": [ {
+        "code": "53",
+        "display": "HBVAXPRO 5"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "55|J07AH03",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Meningokokken-Impfstoff A+C Mérieux",
+          "display": "Meningokokken-Impfstoff A+C Mérieux"
+        }
+      } ],
+      "code": "Meningokokken-Impfstoff A+C Mérieux",
+      "display": "Meningokokken-Impfstoff A+C Mérieux",
+      "target": [ {
+        "code": "55",
+        "display": "Meningokokken-Impfstoff A+C Mérieux"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "56|J07BJ01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Meruvax",
+          "display": "Meruvax"
+        }
+      } ],
+      "code": "Meruvax",
+      "display": "Meruvax",
+      "target": [ {
+        "code": "56",
+        "display": "Meruvax"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "73|J07AG52",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Infanrix DTPa+Hib",
+          "display": "Infanrix DTPa+Hib"
+        }
+      } ],
+      "code": "Infanrix DTPa+Hib",
+      "display": "Infanrix DTPa+Hib",
+      "target": [ {
+        "code": "73",
+        "display": "Infanrix DTPa+Hib"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "74|J07BC20",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Twinrix 360/10",
+          "display": "Twinrix 360/10"
+        }
+      } ],
+      "code": "Twinrix 360/10",
+      "display": "Twinrix 360/10",
+      "target": [ {
+        "code": "74",
+        "display": "Twinrix 360/10"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "75|J07BD52",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Pluserix",
+          "display": "Pluserix"
+        }
+      } ],
+      "code": "Pluserix",
+      "display": "Pluserix",
+      "target": [ {
+        "code": "75",
+        "display": "Pluserix"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "76|J07AJ51",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Acel Immune",
+          "display": "Acel Immune"
+        }
+      } ],
+      "code": "Acel Immune",
+      "display": "Acel Immune",
+      "target": [ {
+        "code": "76",
+        "display": "Acel Immune"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "77|J07AJ02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Acel P",
+          "display": "Acel P"
+        }
+      } ],
+      "code": "Acel P",
+      "display": "Acel P",
+      "target": [ {
+        "code": "77",
+        "display": "Acel P"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "78|J07AG01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Act-Hib",
+          "display": "Act-Hib"
+        }
+      } ],
+      "code": "Act-Hib",
+      "display": "Act-Hib",
+      "target": [ {
+        "code": "78",
+        "display": "Act-Hib"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "79|J07AJ51",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Anatoxal DiTePer",
+          "display": "Anatoxal DiTePer"
+        }
+      } ],
+      "code": "Anatoxal DiTePer",
+      "display": "Anatoxal DiTePer",
+      "target": [ {
+        "code": "79",
+        "display": "Anatoxal DiTePer"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "80|J07AM51",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Anatoxal DiTe Erwachsene",
+          "display": "Anatoxal DiTe Erwachsene"
+        }
+      } ],
+      "code": "Anatoxal DiTe Erwachsene",
+      "display": "Anatoxal DiTe Erwachsene",
+      "target": [ {
+        "code": "80",
+        "display": "Anatoxal DiTe Erwachsene"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "81|J07AM51",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Anatoxal DiTe N Erwachsene",
+          "display": "Anatoxal DiTe N Erwachsene"
+        }
+      } ],
+      "code": "Anatoxal DiTe N Erwachsene",
+      "display": "Anatoxal DiTe N Erwachsene",
+      "target": [ {
+        "code": "81",
+        "display": "Anatoxal DiTe N Erwachsene"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "82|J07AF01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Anatoxal Di",
+          "display": "Anatoxal Di"
+        }
+      } ],
+      "code": "Anatoxal Di",
+      "display": "Anatoxal Di",
+      "target": [ {
+        "code": "82",
+        "display": "Anatoxal Di"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "83|J07AM01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Anatoxal Te",
+          "display": "Anatoxal Te"
+        }
+      } ],
+      "code": "Anatoxal Te",
+      "display": "Anatoxal Te",
+      "target": [ {
+        "code": "83",
+        "display": "Anatoxal Te"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "84|J07AM01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Anatoxal Te N",
+          "display": "Anatoxal Te N"
+        }
+      } ],
+      "code": "Anatoxal Te N",
+      "display": "Anatoxal Te N",
+      "target": [ {
+        "code": "84",
+        "display": "Anatoxal Te N"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "86|J07BL01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Arilvax",
+          "display": "Arilvax"
+        }
+      } ],
+      "code": "Arilvax",
+      "display": "Arilvax",
+      "target": [ {
+        "code": "86",
+        "display": "Arilvax"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "87|J07AN01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "BCG Vaccin Mérieux",
+          "display": "BCG Vaccin Mérieux"
+        }
+      } ],
+      "code": "BCG Vaccin Mérieux",
+      "display": "BCG Vaccin Mérieux",
+      "target": [ {
+        "code": "87",
+        "display": "BCG Vaccin Mérieux"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "88|J07BD51",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Biviraten",
+          "display": "Biviraten"
+        }
+      } ],
+      "code": "Biviraten",
+      "display": "Biviraten",
+      "target": [ {
+        "code": "88",
+        "display": "Biviraten"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "91|J07BJ01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Ervevax",
+          "display": "Ervevax"
+        }
+      } ],
+      "code": "Ervevax",
+      "display": "Ervevax",
+      "target": [ {
+        "code": "91",
+        "display": "Ervevax"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "92|J07AG01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "HibTiter",
+          "display": "HibTiter"
+        }
+      } ],
+      "code": "HibTiter",
+      "display": "HibTiter",
+      "target": [ {
+        "code": "92",
+        "display": "HibTiter"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "93|J07CA05",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Infanrix DTPa-HBV",
+          "display": "Infanrix DTPa-HBV"
+        }
+      } ],
+      "code": "Infanrix DTPa-HBV",
+      "display": "Infanrix DTPa-HBV",
+      "target": [ {
+        "code": "93",
+        "display": "Infanrix DTPa-HBV"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "94|J07BG01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Lyssavac Berna",
+          "display": "Lyssavac Berna"
+        }
+      } ],
+      "code": "Lyssavac Berna",
+      "display": "Lyssavac Berna",
+      "target": [ {
+        "code": "94",
+        "display": "Lyssavac Berna"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "95|J07AH03",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Vaccin méningococcique A+C Mérieux",
+          "display": "Vaccin méningococcique A+C Mérieux"
+        }
+      } ],
+      "code": "Vaccin méningococcique A+C Mérieux",
+      "display": "Vaccin méningococcique A+C Mérieux",
+      "target": [ {
+        "code": "95",
+        "display": "Vaccin méningococcique A+C Mérieux"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "96|J07BD51",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "MM Vax",
+          "display": "MM Vax"
+        }
+      } ],
+      "code": "MM Vax",
+      "display": "MM Vax",
+      "target": [ {
+        "code": "96",
+        "display": "MM Vax"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "97|J07BE01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Mumaten",
+          "display": "Mumaten"
+        }
+      } ],
+      "code": "Mumaten",
+      "display": "Mumaten",
+      "target": [ {
+        "code": "97",
+        "display": "Mumaten"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "98|J07AG01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Pedvax",
+          "display": "Pedvax"
+        }
+      } ],
+      "code": "Pedvax",
+      "display": "Pedvax",
+      "target": [ {
+        "code": "98",
+        "display": "Pedvax"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "99|J07CA06",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Pentacoq",
+          "display": "Pentacoq"
+        }
+      } ],
+      "code": "Pentacoq",
+      "display": "Pentacoq",
+      "target": [ {
+        "code": "99",
+        "display": "Pentacoq"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "100|J07AL01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Pnu-Immune",
+          "display": "Pnu-Immune"
+        }
+      } ],
+      "code": "Pnu-Immune",
+      "display": "Pnu-Immune",
+      "target": [ {
+        "code": "100",
+        "display": "Pnu-Immune"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "101|J07BF03",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Polio Salk",
+          "display": "Polio Salk"
+        }
+      } ],
+      "code": "Polio Salk",
+      "display": "Polio Salk",
+      "target": [ {
+        "code": "101",
+        "display": "Polio Salk"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "102|J07BF03",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Polio Sabin",
+          "display": "Polio Sabin"
+        }
+      } ],
+      "code": "Polio Sabin",
+      "display": "Polio Sabin",
+      "target": [ {
+        "code": "102",
+        "display": "Polio Sabin"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "103|J07BF03",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Poloral",
+          "display": "Poloral"
+        }
+      } ],
+      "code": "Poloral",
+      "display": "Poloral",
+      "target": [ {
+        "code": "103",
+        "display": "Poloral"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "106|J07CA02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Tetracoq",
+          "display": "Tetracoq"
+        }
+      } ],
+      "code": "Tetracoq",
+      "display": "Tetracoq",
+      "target": [ {
+        "code": "106",
+        "display": "Tetracoq"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "107|J07CA02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Tetramune",
+          "display": "Tetramune"
+        }
+      } ],
+      "code": "Tetramune",
+      "display": "Tetramune",
+      "target": [ {
+        "code": "107",
+        "display": "Tetramune"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "110|J07BC02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Vaqta",
+          "display": "Vaqta"
+        }
+      } ],
+      "code": "Vaqta",
+      "display": "Vaqta",
+      "target": [ {
+        "code": "110",
+        "display": "Vaqta"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "111|J07BJ01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Rubeaten",
+          "display": "Rubeaten"
+        }
+      } ],
+      "code": "Rubeaten",
+      "display": "Rubeaten",
+      "target": [ {
+        "code": "111",
+        "display": "Rubeaten"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "112|J07BJ01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Rudivax",
+          "display": "Rudivax"
+        }
+      } ],
+      "code": "Rudivax",
+      "display": "Rudivax",
+      "target": [ {
+        "code": "112",
+        "display": "Rudivax"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "115|J07BC02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Havrix 360",
+          "display": "Havrix 360"
+        }
+      } ],
+      "code": "Havrix 360",
+      "display": "Havrix 360",
+      "target": [ {
+        "code": "115",
+        "display": "Havrix 360"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "117|J07BJ01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Almevax",
+          "display": "Almevax"
+        }
+      } ],
+      "code": "Almevax",
+      "display": "Almevax",
+      "target": [ {
+        "code": "117",
+        "display": "Almevax"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "118|J07BC01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Hevac B",
+          "display": "Hevac B"
+        }
+      } ],
+      "code": "Hevac B",
+      "display": "Hevac B",
+      "target": [ {
+        "code": "118",
+        "display": "Hevac B"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "119|J07BD52",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "MMR-I",
+          "display": "MMR-I"
+        }
+      } ],
+      "code": "MMR-I",
+      "display": "MMR-I",
+      "target": [ {
+        "code": "119",
+        "display": "MMR-I"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "120|J07BD01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Moruman",
+          "display": "Moruman"
+        }
+      } ],
+      "code": "Moruman",
+      "display": "Moruman",
+      "target": [ {
+        "code": "120",
+        "display": "Moruman"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "121|J07BD51",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Rimparix",
+          "display": "Rimparix"
+        }
+      } ],
+      "code": "Rimparix",
+      "display": "Rimparix",
+      "target": [ {
+        "code": "121",
+        "display": "Rimparix"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "122|J07BJ01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Rubevac",
+          "display": "Rubevac"
+        }
+      } ],
+      "code": "Rubevac",
+      "display": "Rubevac",
+      "target": [ {
+        "code": "122",
+        "display": "Rubevac"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "123|J07BD52",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Trimovax",
+          "display": "Trimovax"
+        }
+      } ],
+      "code": "Trimovax",
+      "display": "Trimovax",
+      "target": [ {
+        "code": "123",
+        "display": "Trimovax"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "126|J07AM51",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Ditanrix pediatric",
+          "display": "Ditanrix pediatric"
+        }
+      } ],
+      "code": "Ditanrix pediatric",
+      "display": "Ditanrix pediatric",
+      "target": [ {
+        "code": "126",
+        "display": "Ditanrix pediatric"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "127|J07BD53",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Eolarix",
+          "display": "Eolarix"
+        }
+      } ],
+      "code": "Eolarix",
+      "display": "Eolarix",
+      "target": [ {
+        "code": "127",
+        "display": "Eolarix"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "128|J07BA01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "FSME-Immun Injekt",
+          "display": "FSME-Immun Injekt"
+        }
+      } ],
+      "code": "FSME-Immun Injekt",
+      "display": "FSME-Immun Injekt",
+      "target": [ {
+        "code": "128",
+        "display": "FSME-Immun Injekt"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "133|J07AG01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "ProHibit",
+          "display": "ProHibit"
+        }
+      } ],
+      "code": "ProHibit",
+      "display": "ProHibit",
+      "target": [ {
+        "code": "133",
+        "display": "ProHibit"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "134|J07AM51",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Anatoxal DiTe Kinder",
+          "display": "Anatoxal DiTe Kinder"
+        }
+      } ],
+      "code": "Anatoxal DiTe Kinder",
+      "display": "Anatoxal DiTe Kinder",
+      "target": [ {
+        "code": "134",
+        "display": "Anatoxal DiTe Kinder"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "136|J07BB02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Celtura",
+          "display": "Celtura"
+        }
+      } ],
+      "code": "Celtura",
+      "display": "Celtura",
+      "target": [ {
+        "code": "136",
+        "display": "Celtura"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "137|J07BB02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Focetria",
+          "display": "Focetria"
+        }
+      } ],
+      "code": "Focetria",
+      "display": "Focetria",
+      "target": [ {
+        "code": "137",
+        "display": "Focetria"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "138|J07BF03",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "K1, K2, K3",
+          "display": "K1, K2, K3"
+        }
+      } ],
+      "code": "K1, K2, K3",
+      "display": "K1, K2, K3",
+      "target": [ {
+        "code": "138",
+        "display": "K1, K2, K3"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "139|J07BF03",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Koprowski",
+          "display": "Koprowski"
+        }
+      } ],
+      "code": "Koprowski",
+      "display": "Koprowski",
+      "target": [ {
+        "code": "139",
+        "display": "Koprowski"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "141|J07BB02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Pandemrix",
+          "display": "Pandemrix"
+        }
+      } ],
+      "code": "Pandemrix",
+      "display": "Pandemrix",
+      "target": [ {
+        "code": "141",
+        "display": "Pandemrix"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "142|J07AG52",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Prohibit DTP",
+          "display": "Prohibit DTP"
+        }
+      } ],
+      "code": "Prohibit DTP",
+      "display": "Prohibit DTP",
+      "target": [ {
+        "code": "142",
+        "display": "Prohibit DTP"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "143|J07AP01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "TAB oral",
+          "display": "TAB oral"
+        }
+      } ],
+      "code": "TAB oral",
+      "display": "TAB oral",
+      "target": [ {
+        "code": "143",
+        "display": "TAB oral"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "144|J07BX",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Variola",
+          "display": "Variola"
+        }
+      } ],
+      "code": "Variola",
+      "display": "Variola",
+      "target": [ {
+        "code": "144",
+        "display": "Variola"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "147|J07BF03",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Polio Koprowski (K1-K3)",
+          "display": "Polio Koprowski (K1-K3)"
+        }
+      } ],
+      "code": "Polio Koprowski (K1-K3)",
+      "display": "Polio Koprowski (K1-K3)",
+      "target": [ {
+        "code": "147",
+        "display": "Polio Koprowski (K1-K3)"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "148|J07BF03",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Polio Lilly",
+          "display": "Polio Lilly"
+        }
+      } ],
+      "code": "Polio Lilly",
+      "display": "Polio Lilly",
+      "target": [ {
+        "code": "148",
+        "display": "Polio Lilly"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "151|J07AF01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Di Anatoxal",
+          "display": "Di Anatoxal"
+        }
+      } ],
+      "code": "Di Anatoxal",
+      "display": "Di Anatoxal",
+      "target": [ {
+        "code": "151",
+        "display": "Di Anatoxal"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "154|J07AM51",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "DiTe Anatoxal Kinder / Enfants",
+          "display": "DiTe Anatoxal Kinder / Enfants"
+        }
+      } ],
+      "code": "DiTe Anatoxal Kinder / Enfants",
+      "display": "DiTe Anatoxal Kinder / Enfants",
+      "target": [ {
+        "code": "154",
+        "display": "DiTe Anatoxal Kinder / Enfants"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "155|J07AJ51",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "DiTePer Anatoxal",
+          "display": "DiTePer Anatoxal"
+        }
+      } ],
+      "code": "DiTePer Anatoxal",
+      "display": "DiTePer Anatoxal",
+      "target": [ {
+        "code": "155",
+        "display": "DiTePer Anatoxal"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "162|J07BC01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "HBVAX DNA 5",
+          "display": "HBVAX DNA 5"
+        }
+      } ],
+      "code": "HBVAX DNA 5",
+      "display": "HBVAX DNA 5",
+      "target": [ {
+        "code": "162",
+        "display": "HBVAX DNA 5"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "163|J07BC01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "HBVAX DNA 10",
+          "display": "HBVAX DNA 10"
+        }
+      } ],
+      "code": "HBVAX DNA 10",
+      "display": "HBVAX DNA 10",
+      "target": [ {
+        "code": "163",
+        "display": "HBVAX DNA 10"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "164|J07BC01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "HBVAX DNA 40",
+          "display": "HBVAX DNA 40"
+        }
+      } ],
+      "code": "HBVAX DNA 40",
+      "display": "HBVAX DNA 40",
+      "target": [ {
+        "code": "164",
+        "display": "HBVAX DNA 40"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "165|J07BC02",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Havrix junior",
+          "display": "Havrix junior"
+        }
+      } ],
+      "code": "Havrix junior",
+      "display": "Havrix junior",
+      "target": [ {
+        "code": "165",
+        "display": "Havrix junior"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "166|J07AJ52",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Infanrix",
+          "display": "Infanrix"
+        }
+      } ],
+      "code": "Infanrix",
+      "display": "Infanrix",
+      "target": [ {
+        "code": "166",
+        "display": "Infanrix"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "168|J07AM01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Tanrix",
+          "display": "Tanrix"
+        }
+      } ],
+      "code": "Tanrix",
+      "display": "Tanrix",
+      "target": [ {
+        "code": "168",
+        "display": "Tanrix"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "169|J07BX",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Vaccin variole",
+          "display": "Vaccin variole"
+        }
+      } ],
+      "code": "Vaccin variole",
+      "display": "Vaccin variole",
+      "target": [ {
+        "code": "169",
+        "display": "Vaccin variole"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "170|J07BC01",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Engerix-B 40",
+          "display": "Engerix-B 40"
+        }
+      } ],
+      "code": "Engerix-B 40",
+      "display": "Engerix-B 40",
+      "target": [ {
+        "code": "170",
+        "display": "Engerix-B 40"
+      } ]
+    }, {
+      "extension": [ {
+        "url": "http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code",
+        "valueCoding": {
+          "id": "172|null",
+          "system": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+          "code": "Hepavax",
+          "display": "Hepavax"
+        }
+      } ],
+      "code": "Hepavax",
+      "display": "Hepavax",
+      "target": [ {
+        "code": "172",
+        "display": "Hepavax"
+      } ]
+    } ]
+  } ]
+}

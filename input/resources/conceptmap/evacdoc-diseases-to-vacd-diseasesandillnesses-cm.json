@@ -1,0 +1,173 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "evacdoc-diseases-to-vacd-diseasesandillnesses-cm",
+  "url": "http://fhir.ch/ig/evacdoc-fhir-maps/ConceptMap/evacdoc-diseases-to-vacd-diseasesandillnesses-cm",
+  "version": "0.1.0",
+  "name": "eVacDocDiseaseToCHVACDDiseaseMap",
+  "title": "eVacDoc Disease to ch-vacd Disease Map",
+  "publisher": "RALY GmbH",
+  "contact": [ {
+    "name": "RALY GmbH",
+    "telecom": [ {
+      "system": "url",
+      "value": "https://www.raly.ch/"
+    } ]
+  } ],
+  "sourceUri": "http://fhir.ch/ig/ch-vacd/ValueSet/ch-vacd-targetdiseasesandillnessesundergoneforimmunization-vs",
+  "targetUri": "http://fhir.ch/ig/ch-vacd/ValueSet/ch-vacd-targetdiseasesandillnessesundergoneforimmunization-vs",
+  "group": [ {
+    "source": "http://snomed.info/sct",
+    "target": "http://snomed.info/sct",
+    "element": [ {
+      "code": "38907003",
+      "target": [ {
+        "code": "38907003",
+        "display": "Varicella (disorder)"
+      } ]
+    }, {
+      "code": "14189004",
+      "target": [ {
+        "code": "14189004",
+        "display": "Measles (disorder)"
+      } ]
+    }, {
+      "code": "36989005",
+      "target": [ {
+        "code": "36989005",
+        "display": "Mumps (disorder)"
+      } ]
+    }, {
+      "code": "36653000",
+      "target": [ {
+        "code": "36653000",
+        "display": "Rubella (disorder)"
+      } ]
+    }, {
+      "code": "40468003",
+      "target": [ {
+        "code": "40468003",
+        "display": "Viral hepatitis, type A (disorder)"
+      } ]
+    }, {
+      "code": "66071002",
+      "target": [ {
+        "code": "66071002",
+        "display": "Viral hepatitis type B (disorder)"
+      } ]
+    }, {
+      "code": "16901001",
+      "target": [ {
+        "code": "16901001",
+        "display": "Central European encephalitis (disorder)"
+      } ]
+    }, {
+      "code": "16541001",
+      "target": [ {
+        "code": "16541001",
+        "display": "Yellow fever (disorder)"
+      } ]
+    }, {
+      "code": "76902006",
+      "target": [ {
+        "code": "76902006",
+        "display": "Tetanus (disorder)"
+      } ]
+    }, {
+      "code": "63650001",
+      "target": [ {
+        "code": "63650001",
+        "display": "Cholera (disorder)"
+      } ]
+    }, {
+      "code": "27836007",
+      "target": [ {
+        "code": "27836007",
+        "display": "Pertussis (disorder)"
+      } ]
+    }, {
+      "code": "127341000119105",
+      "target": [ {
+        "code": "127341000119105",
+        "display": "Severe sepsis with acute organ dysfunction caused by Pneumococcus (disorder)"
+      } ]
+    }, {
+      "code": "127261000119100",
+      "target": [ {
+        "code": "127261000119100",
+        "display": "Septic shock co-occurrent with acute organ dysfunction caused by Pneumococcus (disorder)"
+      } ]
+    }, {
+      "code": "398102009",
+      "target": [ {
+        "code": "398102009",
+        "display": "Acute poliomyelitis (disorder)"
+      } ]
+    }, {
+      "code": "18624000",
+      "target": [ {
+        "code": "18624000",
+        "display": "Disease caused by Rotavirus (disorder)"
+      } ]
+    }, {
+      "code": "14168008",
+      "target": [ {
+        "code": "14168008",
+        "display": "Rabies (disorder)"
+      } ]
+    }, {
+      "code": "56717001",
+      "target": [ {
+        "code": "56717001",
+        "display": "Tuberculosis (disorder)"
+      } ]
+    }, {
+      "code": "4834000",
+      "target": [ {
+        "code": "4834000",
+        "display": "Typhoid fever (disorder)"
+      } ]
+    }, {
+      "code": "709410003",
+      "target": [ {
+        "code": "709410003",
+        "display": "Haemophilus influenzae type b infection (disorder)"
+      } ]
+    }, {
+      "code": "397430003",
+      "target": [ {
+        "code": "397430003",
+        "display": "Diphtheria caused by Corynebacterium diphtheriae (disorder)"
+      } ]
+    }, {
+      "code": "840539006",
+      "target": [ {
+        "code": "840539006",
+        "display": "Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
+      } ]
+    }, {
+      "code": "30415006",
+      "target": [ {
+        "code": "30415006",
+        "display": "Disease caused by Papillomavirus (disorder)"
+      } ]
+    }, {
+      "code": "860805006",
+      "target": [ {
+        "code": "860805006",
+        "display": "Encephalomyelitis caused by Neisseria meningitidis (disorder)"
+      } ]
+    }, {
+      "code": "52947006",
+      "target": [ {
+        "code": "52947006",
+        "display": "Japanese encephalitis virus disease (disorder)"
+      } ]
+    }, {
+      "code": "719590007",
+      "target": [ {
+        "code": "719590007",
+        "display": "Influenza caused by seasonal influenza virus (disorder)"
+      } ]
+    } ]
+  } ]
+}

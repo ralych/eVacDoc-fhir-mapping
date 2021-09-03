@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+	<id value="evacdoc-fhir-maps-ext-manufacturedmaterial-code" />
+	<url
+		value="http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code" />
+	<version value="0.1.0" />
+	<name value="EVACDOCExtensionManufacturedMaterialCode" />
+	<title
+		value="EVACDOC Extension Manufactured Material Code" />
+	<status value="draft" />
+	<date value="2021-05-10T00:00:00+00:00" />
+	<publisher value="eHealth Suisse" />
+	<kind value="complex-type" />
+	<abstract value="false" />
+	<description
+		value="Extension for manufactured material code in conecpt map." />
+	<context>
+		<type value="element" />
+		<expression value="ConceptMap.group.element" />
+	</context>
+	<type value="Extension" />
+	<baseDefinition
+		value="http://hl7.org/fhir/StructureDefinition/Extension" />
+	<derivation value="constraint" />
+	<differential>
+		<element id="Extension">
+			<path value="Extension" />
+			<short value="Extension Manufactured Material Code" />
+			<definition value="Extension" />
+			<mustSupport value="true" />
+			<isModifier value="false" />
+		</element>
+		<element id="Extension.url">
+			<path value="Extension.url" />
+			<type>
+				<code value="uri" />
+			</type>
+			<fixedUri
+				value="http://fhir.ch/ig/evacdoc-fhir-maps/StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code" />
+		</element>
+		<element id="Extension.valueCoding">
+			<path value="Extension.valueCoding" />
+			<short value="Value of extension" />
+			<min value="1" />
+			<type>
+				<code value="Coding" />
+			</type>
+			<binding>
+				<strength value="required" />
+				<valueSet
+					value="http://fhir.ch/ig/evacdoc-fhir-maps/ValueSet/evacdoc-vaccines-vs" />
+			</binding>
+		</element>
+	</differential>
+</StructureDefinition>

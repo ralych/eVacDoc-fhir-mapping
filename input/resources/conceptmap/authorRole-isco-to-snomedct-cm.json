@@ -1,0 +1,167 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "authorRole-isco-to-snomedct-cm",
+  "url": "http://fhir.ch/ig/evacdoc-fhir-maps/ConceptMap/authorRole-isco-to-snomedct-cm",
+  "name": "AuthorRoleISCOtoSnomeCTConceptMap",
+  "title": "Author Role ISCO to SnomeCT ConceptMap",
+  "sourceUri": "http://terminology.hl7.org/ValueSet/v3-AdministrativeGender",
+  "targetUri": "http://snomed.info/sct",
+  "group": [
+    {
+      "source": "2.16.840.1.113883.2.9.6.2.7",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "2262",
+          "display": "Pharmacists",
+          "target": [
+            {
+              "code": "46255001",
+              "display": "Pharmacist (occupation)"
+            }
+          ]
+        },
+        {
+          "code": "221",
+          "display": "Medical doctors",
+          "target": [
+            {
+              "code": "309343006",
+              "display": "Physician (occupation)"
+            }
+          ]
+        },
+        {
+          "code": "2269",
+          "display": "Health Professionals Not Elsewhere Classified",
+          "target": [
+            {
+              "code": "3842006",
+              "display": "Chiropractor (occupation)"
+            }
+          ]
+        },
+        {
+          "code": "2265",
+          "display": "Dieticians and nutritionists",
+          "target": [
+            {
+              "code": "159033005",
+              "display": "Dietitian (occupation)"
+            }
+          ]
+        },
+        {
+          "code": "2222",
+          "display": "Midwifery professionals",
+          "target": [
+            {
+              "code": "309453006",
+              "display": "Registered midwife (occupation)"
+            }
+          ]
+        },
+        {
+          "code": "323",
+          "display": "Traditional and complementary medicine associate professionals",
+          "target": [
+            {
+              "code": "224609002",
+              "display": "Complementary health worker (occupation)"
+            }
+          ]
+        },
+        {
+          "code": "2221",
+          "display": "Nursing professionals",
+          "target": [
+            {
+              "code": "106292003",
+              "display": "Professional nurse (occupation)"
+            }
+          ]
+        },
+        {
+          "code": "2634",
+          "display": "Psychologists",
+          "target": [
+            {
+              "code": "59944000",
+              "display": "Psychologist (occupation)"
+            }
+          ]
+        },
+        {
+          "code": "2635",
+          "display": "Social Work and Counselling Professionals",
+          "target": [
+            {
+              "code": "158933003",
+              "display": "Social caseworker (general) (occupation)"
+            }
+          ]
+        },
+        {
+          "code": "2266",
+          "display": "Audiologists and speech therapists",
+          "target": [
+            {
+              "code": "159026005",
+              "display": "Speech/language therapist (occupation)"
+            }
+          ]
+        },
+        {
+          "code": "2264",
+          "display": "Physiotherapists",
+          "target": [
+            {
+              "code": "36682004",
+              "display": "Physiotherapist (occupation)"
+            }
+          ]
+        },
+        {
+          "code": "2263",
+          "display": "Environmental and occupational health and hygiene professionals",
+          "target": [
+            {
+              "code": "80546007",
+              "display": "Occupational therapist (occupation)"
+            }
+          ]
+        },
+        {
+          "code": "3222",
+          "display": "Midwifery associate professionals",
+          "target": [
+            {
+              "code": "225726006",
+              "display": "Lactation consultant (occupation)"
+            }
+          ]
+        },
+        {
+          "code": "2261",
+          "display": "Dentists",
+          "target": [
+            {
+              "code": "106289002",
+              "display": "Dentist (occupation)"
+            }
+          ]
+        },
+        {
+          "code": "22",
+          "display": "Health professionals",
+          "target": [
+            {
+              "code": "223366009",
+              "display": "Healthcare professional (occupation)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

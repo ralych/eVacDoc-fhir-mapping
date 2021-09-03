@@ -1,0 +1,27 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "cm-v3-administrative-gender",
+  "url": "http://fhir.ch/ig/evacdoc-fhir-maps/ConceptMap/cm-v3-administrative-gender",
+  "name": "ConceptMapV3ToAdministrativeGender",
+  "title": "ConceptMap V3 To AdministrativeGender",
+  "status": "draft",
+  "sourceUri": "http://terminology.hl7.org/ValueSet/v3-AdministrativeGender",
+  "targetUri": "http://hl7.org/fhir/ValueSet/administrative-gender",
+  "group": [ {
+    "source": "http://terminology.hl7.org/ValueSet/v3-AdministrativeGender",
+    "target": "http://hl7.org/fhir/ValueSet/administrative-gender",
+    "element": [ {
+      "code": "M",
+      "target": [ {
+        "code": "male",
+        "equivalence": "equivalent"
+      } ]
+    }, {
+      "code": "F",
+      "target": [ {
+        "code": "female",
+        "equivalence": "equivalent"
+      } ]
+    } ]
+  } ]
+}

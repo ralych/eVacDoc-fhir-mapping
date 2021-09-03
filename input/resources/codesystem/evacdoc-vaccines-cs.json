@@ -1,0 +1,662 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "evacdoc-vaccines-cs",
+  "url": "http://fhir.ch/ig/evacdoc-fhir-maps/CodeSystem/evacdoc-vaccines-cs",
+  "version": "0.1.0",
+  "name": "eVacDocVaccinesCodeSystem",
+  "title": "eVacDoc Vaccines CodeSystem",
+  "publisher": "RALY GmbH",
+  "contact": [ {
+    "name": "RALY GmbH",
+    "telecom": [ {
+      "system": "url",
+      "value": "https://www.raly.ch/"
+    } ]
+  } ],
+  "content": "complete",
+  "concept": [ {
+    "id": "0|",
+    "code": "Anderer Impfstoff",
+    "display": "Anderer Impfstoff"
+  }, {
+    "id": "1|J07BA01",
+    "code": "FSME-Immun 0.25 ml Junior",
+    "display": "FSME-Immun 0.25 ml Junior"
+  }, {
+    "id": "2|J07BA01",
+    "code": "FSME-Immun CC",
+    "display": "FSME-Immun CC"
+  }, {
+    "id": "3|J07AH07",
+    "code": "NeisVac-C",
+    "display": "NeisVac-C"
+  }, {
+    "id": "6|J07BA01",
+    "code": "Encepur N",
+    "display": "Encepur N"
+  }, {
+    "id": "7|J07BA01",
+    "code": "Encepur N Kinder / Enfants",
+    "display": "Encepur N Kinder / Enfants"
+  }, {
+    "id": "8|J07BC02",
+    "code": "Epaxal",
+    "display": "Epaxal"
+  }, {
+    "id": "9|J07BC01",
+    "code": "Heprecomb",
+    "display": "Heprecomb"
+  }, {
+    "id": "10|J07BC01",
+    "code": "Heprecomb Kinder",
+    "display": "Heprecomb Kinder"
+  }, {
+    "id": "11|J07BB02",
+    "code": "Inflexal V",
+    "display": "Inflexal V"
+  }, {
+    "id": "12|J07AH07",
+    "code": "Menjugate",
+    "display": "Menjugate"
+  }, {
+    "id": "13|J07BD01",
+    "code": "Moraten",
+    "display": "Moraten"
+  }, {
+    "id": "14|J07BD53",
+    "code": "MoRu-Viraten",
+    "display": "MoRu-Viraten"
+  }, {
+    "id": "15|J07AE02",
+    "code": "Orochol",
+    "display": "Orochol"
+  }, {
+    "id": "16|J07AE02",
+    "code": "Orochol E",
+    "display": "Orochol E"
+  }, {
+    "id": "17|J07BF03",
+    "code": "Poliomyelitis Impfstoff Berna",
+    "display": "Poliomyelitis Impfstoff Berna"
+  }, {
+    "id": "18|J07BG01",
+    "code": "Rabipur",
+    "display": "Rabipur"
+  }, {
+    "id": "19|J07AM51",
+    "code": "Td-pur",
+    "display": "Td-pur"
+  }, {
+    "id": "20|J07CA01",
+    "code": "Td-Virelon",
+    "display": "Td-Virelon"
+  }, {
+    "id": "23|J07BD52",
+    "code": "Triviraten",
+    "display": "Triviraten"
+  }, {
+    "id": "24|J07AP01",
+    "code": "Vivotif",
+    "display": "Vivotif"
+  }, {
+    "id": "25|J07AP01",
+    "code": "Vivotif L",
+    "display": "Vivotif L"
+  }, {
+    "id": "26|J07AJ52",
+    "code": "Boostrix",
+    "display": "Boostrix"
+  }, {
+    "id": "27|J07CA02",
+    "code": "Boostrix Polio",
+    "display": "Boostrix Polio"
+  }, {
+    "id": "28|J07AM51",
+    "code": "Ditanrix",
+    "display": "Ditanrix"
+  }, {
+    "id": "29|J07BC01",
+    "code": "Engerix-B 10",
+    "display": "Engerix-B 10"
+  }, {
+    "id": "30|J07BC01",
+    "code": "Engerix-B 20",
+    "display": "Engerix-B 20"
+  }, {
+    "id": "31|J07BB02",
+    "code": "Fluarix",
+    "display": "Fluarix"
+  }, {
+    "id": "32|J07BC02",
+    "code": "Havrix 1440",
+    "display": "Havrix 1440"
+  }, {
+    "id": "33|J07BC02",
+    "code": "Havrix 720",
+    "display": "Havrix 720"
+  }, {
+    "id": "34|J07AG01",
+    "code": "Hiberix",
+    "display": "Hiberix"
+  }, {
+    "id": "35|J07AJ52",
+    "code": "Infanrix DTPa",
+    "display": "Infanrix DTPa"
+  }, {
+    "id": "36|J07CA02",
+    "code": "Infanrix DTPa-IPV",
+    "display": "Infanrix DTPa-IPV"
+  }, {
+    "id": "37|J07CA06",
+    "code": "Infanrix DTPa-IPV+Hib",
+    "display": "Infanrix DTPa-IPV+Hib"
+  }, {
+    "id": "38|J07CA09",
+    "code": "Infanrix hexa",
+    "display": "Infanrix hexa"
+  }, {
+    "id": "39|J07CA06",
+    "code": "Infanrix Penta",
+    "display": "Infanrix Penta"
+  }, {
+    "id": "40|J07AH04",
+    "code": "Mencevax ACWY",
+    "display": "Mencevax ACWY"
+  }, {
+    "id": "41|J07BF03",
+    "code": "Poliorix",
+    "display": "Poliorix"
+  }, {
+    "id": "42|J07BD52",
+    "code": "Priorix",
+    "display": "Priorix"
+  }, {
+    "id": "43|J07BC20",
+    "code": "Twinrix 720/20",
+    "display": "Twinrix 720/20"
+  }, {
+    "id": "44|J07BK01",
+    "code": "Varilrix",
+    "display": "Varilrix"
+  }, {
+    "id": "47|J07BD01",
+    "code": "Attenuvax",
+    "display": "Attenuvax"
+  }, {
+    "id": "48|J07AN01",
+    "code": "BCG",
+    "display": "BCG"
+  }, {
+    "id": "49|J07BC01",
+    "code": "Gen H-B-Vax 10",
+    "display": "Gen H-B-Vax 10"
+  }, {
+    "id": "50|J07BC01",
+    "code": "HBVAXPRO 40",
+    "display": "HBVAXPRO 40"
+  }, {
+    "id": "51|J07BC01",
+    "code": "Gen H-B-Vax 5",
+    "display": "Gen H-B-Vax 5"
+  }, {
+    "id": "52|J07BC01",
+    "code": "HBVAXPRO 10",
+    "display": "HBVAXPRO 10"
+  }, {
+    "id": "53|J07BC01",
+    "code": "HBVAXPRO 5",
+    "display": "HBVAXPRO 5"
+  }, {
+    "id": "54|J07BD52",
+    "code": "MMR-II",
+    "display": "MMR-II"
+  }, {
+    "id": "55|J07AH03",
+    "code": "Meningokokken-Impfstoff A+C Mérieux",
+    "display": "Meningokokken-Impfstoff A+C Mérieux"
+  }, {
+    "id": "56|J07BJ01",
+    "code": "Meruvax",
+    "display": "Meruvax"
+  }, {
+    "id": "57|J07BE01",
+    "code": "Mumpsvax",
+    "display": "Mumpsvax"
+  }, {
+    "id": "58|J07BB02",
+    "code": "Mutagrip",
+    "display": "Mutagrip"
+  }, {
+    "id": "59|J07CA06",
+    "code": "Pentavac",
+    "display": "Pentavac"
+  }, {
+    "id": "60|J07AL01",
+    "code": "Pneumovax-23",
+    "display": "Pneumovax-23"
+  }, {
+    "id": "61|J07CA01",
+    "code": "Revaxis",
+    "display": "Revaxis"
+  }, {
+    "id": "62|J07BL01",
+    "code": "Stamaril",
+    "display": "Stamaril"
+  }, {
+    "id": "63|J07CA02",
+    "code": "Tetravac",
+    "display": "Tetravac"
+  }, {
+    "id": "64|J07BG01",
+    "code": "Tollwut Impfstoff Mérieux",
+    "display": "Tollwut Impfstoff Mérieux"
+  }, {
+    "id": "65|J07BK01",
+    "code": "Varivax",
+    "display": "Varivax"
+  }, {
+    "id": "66|J07BB02",
+    "code": "Influvac",
+    "display": "Influvac"
+  }, {
+    "id": "67|J07BB02",
+    "code": "Influvac plus",
+    "display": "Influvac plus"
+  }, {
+    "id": "70|J07AH07",
+    "code": "Meningitec",
+    "display": "Meningitec"
+  }, {
+    "id": "71|J07AL02",
+    "code": "Prevenar-7",
+    "display": "Prevenar-7"
+  }, {
+    "id": "72|J07CA09",
+    "code": "Hexavac",
+    "display": "Hexavac"
+  }, {
+    "id": "73|J07AG52",
+    "code": "Infanrix DTPa+Hib",
+    "display": "Infanrix DTPa+Hib"
+  }, {
+    "id": "74|J07BC20",
+    "code": "Twinrix 360/10",
+    "display": "Twinrix 360/10"
+  }, {
+    "id": "75|J07BD52",
+    "code": "Pluserix",
+    "display": "Pluserix"
+  }, {
+    "id": "76|J07AJ51",
+    "code": "Acel Immune",
+    "display": "Acel Immune"
+  }, {
+    "id": "77|J07AJ02",
+    "code": "Acel P",
+    "display": "Acel P"
+  }, {
+    "id": "78|J07AG01",
+    "code": "Act-Hib",
+    "display": "Act-Hib"
+  }, {
+    "id": "79|J07AJ51",
+    "code": "Anatoxal DiTePer",
+    "display": "Anatoxal DiTePer"
+  }, {
+    "id": "80|J07AM51",
+    "code": "Anatoxal DiTe Erwachsene",
+    "display": "Anatoxal DiTe Erwachsene"
+  }, {
+    "id": "81|J07AM51",
+    "code": "Anatoxal DiTe N Erwachsene",
+    "display": "Anatoxal DiTe N Erwachsene"
+  }, {
+    "id": "82|J07AF01",
+    "code": "Anatoxal Di",
+    "display": "Anatoxal Di"
+  }, {
+    "id": "83|J07AM01",
+    "code": "Anatoxal Te",
+    "display": "Anatoxal Te"
+  }, {
+    "id": "84|J07AM01",
+    "code": "Anatoxal Te N",
+    "display": "Anatoxal Te N"
+  }, {
+    "id": "86|J07BL01",
+    "code": "Arilvax",
+    "display": "Arilvax"
+  }, {
+    "id": "87|J07AN01",
+    "code": "BCG Vaccin Mérieux",
+    "display": "BCG Vaccin Mérieux"
+  }, {
+    "id": "88|J07BD51",
+    "code": "Biviraten",
+    "display": "Biviraten"
+  }, {
+    "id": "89|J07AM51",
+    "code": "DiTe pediatric adsorbed",
+    "display": "DiTe pediatric adsorbed"
+  }, {
+    "id": "90|J07AE01",
+    "code": "Dukoral",
+    "display": "Dukoral"
+  }, {
+    "id": "91|J07BJ01",
+    "code": "Ervevax",
+    "display": "Ervevax"
+  }, {
+    "id": "92|J07AG01",
+    "code": "HibTiter",
+    "display": "HibTiter"
+  }, {
+    "id": "93|J07CA05",
+    "code": "Infanrix DTPa-HBV",
+    "display": "Infanrix DTPa-HBV"
+  }, {
+    "id": "94|J07BG01",
+    "code": "Lyssavac Berna",
+    "display": "Lyssavac Berna"
+  }, {
+    "id": "95|J07AH03",
+    "code": "Vaccin méningococcique A+C Mérieux",
+    "display": "Vaccin méningococcique A+C Mérieux"
+  }, {
+    "id": "96|J07BD51",
+    "code": "MM Vax",
+    "display": "MM Vax"
+  }, {
+    "id": "97|J07BE01",
+    "code": "Mumaten",
+    "display": "Mumaten"
+  }, {
+    "id": "98|J07AG01",
+    "code": "Pedvax",
+    "display": "Pedvax"
+  }, {
+    "id": "99|J07CA06",
+    "code": "Pentacoq",
+    "display": "Pentacoq"
+  }, {
+    "id": "100|J07AL01",
+    "code": "Pnu-Immune",
+    "display": "Pnu-Immune"
+  }, {
+    "id": "101|J07BF03",
+    "code": "Polio Salk",
+    "display": "Polio Salk"
+  }, {
+    "id": "102|J07BF03",
+    "code": "Polio Sabin",
+    "display": "Polio Sabin"
+  }, {
+    "id": "103|J07BF03",
+    "code": "Poloral",
+    "display": "Poloral"
+  }, {
+    "id": "104|J07BG01",
+    "code": "Rabique Mérieux",
+    "display": "Rabique Mérieux"
+  }, {
+    "id": "105|J07BD01",
+    "code": "Rimevax",
+    "display": "Rimevax"
+  }, {
+    "id": "106|J07CA02",
+    "code": "Tetracoq",
+    "display": "Tetracoq"
+  }, {
+    "id": "107|J07CA02",
+    "code": "Tetramune",
+    "display": "Tetramune"
+  }, {
+    "id": "108|J07AM01",
+    "code": "Tetanol pur",
+    "display": "Tetanol pur"
+  }, {
+    "id": "110|J07BC02",
+    "code": "Vaqta",
+    "display": "Vaqta"
+  }, {
+    "id": "111|J07BJ01",
+    "code": "Rubeaten",
+    "display": "Rubeaten"
+  }, {
+    "id": "112|J07BJ01",
+    "code": "Rudivax",
+    "display": "Rudivax"
+  }, {
+    "id": "113|J07BM01",
+    "code": "Gardasil",
+    "display": "Gardasil"
+  }, {
+    "id": "115|J07BC02",
+    "code": "Havrix 360",
+    "display": "Havrix 360"
+  }, {
+    "id": "116|J07BK02",
+    "code": "Zostavax",
+    "display": "Zostavax"
+  }, {
+    "id": "117|J07BJ01",
+    "code": "Almevax",
+    "display": "Almevax"
+  }, {
+    "id": "118|J07BC01",
+    "code": "Hevac B",
+    "display": "Hevac B"
+  }, {
+    "id": "119|J07BD52",
+    "code": "MMR-I",
+    "display": "MMR-I"
+  }, {
+    "id": "120|J07BD01",
+    "code": "Moruman",
+    "display": "Moruman"
+  }, {
+    "id": "121|J07BD51",
+    "code": "Rimparix",
+    "display": "Rimparix"
+  }, {
+    "id": "122|J07BJ01",
+    "code": "Rubevac",
+    "display": "Rubevac"
+  }, {
+    "id": "123|J07BD52",
+    "code": "Trimovax",
+    "display": "Trimovax"
+  }, {
+    "id": "124|J07BD54",
+    "code": "Priorix-Tetra",
+    "display": "Priorix-Tetra"
+  }, {
+    "id": "125|J07AN01",
+    "code": "BCG SSI",
+    "display": "BCG SSI"
+  }, {
+    "id": "126|J07AM51",
+    "code": "Ditanrix pediatric",
+    "display": "Ditanrix pediatric"
+  }, {
+    "id": "127|J07BD53",
+    "code": "Eolarix",
+    "display": "Eolarix"
+  }, {
+    "id": "128|J07BA01",
+    "code": "FSME-Immun Injekt",
+    "display": "FSME-Immun Injekt"
+  }, {
+    "id": "129|J07BB02",
+    "code": "Fluad",
+    "display": "Fluad"
+  }, {
+    "id": "130|J07BH01",
+    "code": "Rotarix",
+    "display": "Rotarix"
+  }, {
+    "id": "131|J07BD52",
+    "code": "MMRVaxPro",
+    "display": "MMRVaxPro"
+  }, {
+    "id": "132|J07BD01",
+    "code": "Measles vaccine live",
+    "display": "Measles vaccine live"
+  }, {
+    "id": "133|J07AG01",
+    "code": "ProHibit",
+    "display": "ProHibit"
+  }, {
+    "id": "134|J07AM51",
+    "code": "Anatoxal DiTe Kinder",
+    "display": "Anatoxal DiTe Kinder"
+  }, {
+    "id": "135|J07BB02",
+    "code": "Agrippal",
+    "display": "Agrippal"
+  }, {
+    "id": "136|J07BB02",
+    "code": "Celtura",
+    "display": "Celtura"
+  }, {
+    "id": "137|J07BB02",
+    "code": "Focetria",
+    "display": "Focetria"
+  }, {
+    "id": "138|J07BF03",
+    "code": "K1, K2, K3",
+    "display": "K1, K2, K3"
+  }, {
+    "id": "139|J07BF03",
+    "code": "Koprowski",
+    "display": "Koprowski"
+  }, {
+    "id": "140|J07BB02",
+    "code": "Optaflu",
+    "display": "Optaflu"
+  }, {
+    "id": "141|J07BB02",
+    "code": "Pandemrix",
+    "display": "Pandemrix"
+  }, {
+    "id": "142|J07AG52",
+    "code": "Prohibit DTP",
+    "display": "Prohibit DTP"
+  }, {
+    "id": "143|J07AP01",
+    "code": "TAB oral",
+    "display": "TAB oral"
+  }, {
+    "id": "144|J07BX",
+    "code": "Variola",
+    "display": "Variola"
+  }, {
+    "id": "145|J07BM02",
+    "code": "Cervarix",
+    "display": "Cervarix"
+  }, {
+    "id": "146|J07AL02",
+    "code": "Prevenar-13",
+    "display": "Prevenar-13"
+  }, {
+    "id": "147|J07BF03",
+    "code": "Polio Koprowski (K1-K3)",
+    "display": "Polio Koprowski (K1-K3)"
+  }, {
+    "id": "148|J07BF03",
+    "code": "Polio Lilly",
+    "display": "Polio Lilly"
+  }, {
+    "id": "149|J07BA02",
+    "code": "Ixiaro",
+    "display": "Ixiaro"
+  }, {
+    "id": "150|J07AH08",
+    "code": "Menveo",
+    "display": "Menveo"
+  }, {
+    "id": "151|J07AF01",
+    "code": "Di Anatoxal",
+    "display": "Di Anatoxal"
+  }, {
+    "id": "152|J07AM51",
+    "code": "DiTe Anatoxal Erwachsene / Adultes",
+    "display": "DiTe Anatoxal Erwachsene / Adultes"
+  }, {
+    "id": "153|J07AM51",
+    "code": "DiTe Anatoxal N Erwachsene / Adultes",
+    "display": "DiTe Anatoxal N Erwachsene / Adultes"
+  }, {
+    "id": "154|J07AM51",
+    "code": "DiTe Anatoxal Kinder / Enfants",
+    "display": "DiTe Anatoxal Kinder / Enfants"
+  }, {
+    "id": "155|J07AJ51",
+    "code": "DiTePer Anatoxal",
+    "display": "DiTePer Anatoxal"
+  }, {
+    "id": "156|J07AM01",
+    "code": "Te Anatoxal",
+    "display": "Te Anatoxal"
+  }, {
+    "id": "157|J07AM01",
+    "code": "Te Anatoxal N",
+    "display": "Te Anatoxal N"
+  }, {
+    "id": "158|J07BA01",
+    "code": "Encepur",
+    "display": "Encepur"
+  }, {
+    "id": "159|J07BA01",
+    "code": "Encepur Kinder / Enfants",
+    "display": "Encepur Kinder / Enfants"
+  }, {
+    "id": "162|J07BC01",
+    "code": "HBVAX DNA 5",
+    "display": "HBVAX DNA 5"
+  }, {
+    "id": "163|J07BC01",
+    "code": "HBVAX DNA 10",
+    "display": "HBVAX DNA 10"
+  }, {
+    "id": "164|J07BC01",
+    "code": "HBVAX DNA 40",
+    "display": "HBVAX DNA 40"
+  }, {
+    "id": "165|J07BC02",
+    "code": "Havrix junior",
+    "display": "Havrix junior"
+  }, {
+    "id": "166|J07AJ52",
+    "code": "Infanrix",
+    "display": "Infanrix"
+  }, {
+    "id": "168|J07AM01",
+    "code": "Tanrix",
+    "display": "Tanrix"
+  }, {
+    "id": "169|J07BX",
+    "code": "Vaccin variole",
+    "display": "Vaccin variole"
+  }, {
+    "id": "170|J07BC01",
+    "code": "Engerix-B 40",
+    "display": "Engerix-B 40"
+  }, {
+    "id": "171|J07BB02",
+    "code": "Fluarix Tetra",
+    "display": "Fluarix Tetra"
+  }, {
+    "id": "172|null",
+    "code": "Hepavax",
+    "display": "Hepavax"
+  }, {
+    "id": "173|J07BX03",
+    "code": "COVID-19 Vaccine (Moderna)",
+    "display": "COVID-19 Vaccine (Moderna)"
+  }, {
+    "id": "174|J07BX03",
+    "code": "COMIRNATY (Pfizer)",
+    "display": "COMIRNATY (Pfizer)"
+  } ]
+}
