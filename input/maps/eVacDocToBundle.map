@@ -107,6 +107,9 @@ group ChExtEprConfidentialityCode(source src: CE, target ext: Extension) {
   src -> ext.value = create('CodeableConcept') as value then CECodeableConcept(src, value) "code";
 }
 
+
+// ///////////////////////////////////////////////////////////////////////
+// Composition
 group eVacDocClinicalDocumentComposition(source src : ClinicalDocument, target tgt : Composition, target patientResource: Patient, target organization : Organization, target bundle : Bundle) {
   src -> tgt.meta as meta,
            meta.profile as profile,
@@ -154,8 +157,6 @@ group eVacDocClinicalDocumentComposition(source src : ClinicalDocument, target t
     // create practitioner
     e.resource = create('Practitioner') as practitioner, 
     practitioner.id = uuid() as uuid2,
-    practitioner.name as name,
-    name.family = 'Creating Practitioner',
     e.fullUrl = append('urn:uuid:',uuid2),
     
     
@@ -184,7 +185,11 @@ group eVacDocClinicalDocumentComposition(source src : ClinicalDocument, target t
           assignedAuthor.addr -> practitioner.address;
           assignedAuthor.telecom -> practitioner.telecom;
           assignedAuthor.assignedPerson as person then {
-            person.name -> practitioner.name;
+            person.name as name then {
+              name.other as other -> organization.name = truncate(other, 9),
+                practitioner.name as practName,
+                practName.family = truncate(other, 9), practName.given = (%other.substring(10));
+            } "other";
           } "name";
           assignedAuthor.representedOrganization as srcOrg ->  bundle.entry as e4,
             e4.resource = create('Organization') as reprOrganization,
@@ -262,6 +267,8 @@ group eVacDocClinicalDocumentComposition(source src : ClinicalDocument, target t
   
 // _________________________ Section Level Templates _________________________ 
 
+// ///////////////////////////////////////////////////////////////////////
+// IMMUNIZATION SECTION
 // source: http://art-decor.org/decor/services/RetrieveTemplate?prefix=cdachvacd-&version=2017-06-13T08:50:29&language=en-US&ui=en-US&id=2.16.756.5.30.1.127.10.3.1&effectiveDate=2015-12-14T00:00:00
 // target: 
 // 2.16.756.5.30.1.127.10.3.1, 2.16.840.1.113883.10.20.1.6, 1.3.6.1.4.1.19376.1.5.3.1.3.23
@@ -290,6 +297,8 @@ group eVacDocImmunizationSectionContentModule(source src : Section, source patie
   } "cdaEntryImm";
 }
 
+// ///////////////////////////////////////////////////////////////////////
+// MEDICAL PROBLEMS SECTION
 // source: http://art-decor.org/decor/services/RetrieveTemplate?prefix=cdachvacd-&version=2017-06-13T08:50:29&language=en-US&ui=en-US&id=2.16.756.5.30.1.127.10.3.2&effectiveDate=2015-12-14T00:00:00&format=html
 // target: 
 //2.16.756.5.30.1.127.10.3.2, 1.3.6.1.4.1.19376.1.5.3.1.3.6, 2.16.840.1.113883.10.20.1.11
@@ -309,6 +318,8 @@ group eVacDocMedicalProblemsSectionContentModule(source src : Section, source pa
      src.section as srcSection -> tgt.section as tgtSection then eVacDocMedicalProblemsSectionContentModule(srcSection, patient, tgtSection, bundle);
 }
 
+// ///////////////////////////////////////////////////////////////////////
+// PAST ILLNESSES SECTION
 // source: http://art-decor.org/decor/services/RetrieveTemplate?prefix=cdachvacd-&version=2017-06-13T08:50:29&language=en-US&ui=en-US&id=2.16.756.5.30.1.127.10.3.2&effectiveDate=2015-12-14T00:00:00&format=html
 // target:
 // 2.16.756.5.30.1.127.10.3.3, 	1.3.6.1.4.1.19376.1.5.3.1.3.8
@@ -336,6 +347,8 @@ group eVacDocPastIllnessSectionContentModule(source src : Section, source patien
   } "cdaEntryPI";
 }
 
+// ///////////////////////////////////////////////////////////////////////
+// ALLERGIES SECTION
 // source: http://art-decor.org/decor/services/RetrieveTemplate?prefix=cdachvacd-&version=2017-06-13T08:50:29&language=en-US&ui=en-US&id=2.16.756.5.30.1.127.10.3.4&effectiveDate=2015-12-14T00:00:00&format=html
 // target:
 // 2.16.756.5.30.1.127.10.3.4, 1.3.6.1.4.1.19376.1.5.3.1.3.13, 2.16.840.1.113883.10.20.1.2
@@ -355,6 +368,9 @@ group eVacDocAllergiesSectionContentModule(source src : Section, source patient 
      src.section as srcSection -> tgt.section as tgtSection then eVacDocAllergiesSectionContentModule(srcSection, patient, tgtSection, bundle);
 }
 
+
+// ///////////////////////////////////////////////////////////////////////
+// OTHER RELEVANT PROBLEMS SECTION
 // source: http://art-decor.org/decor/services/RetrieveTemplate?prefix=cdachvacd-&version=2017-06-13T08:50:29&language=en-US&ui=en-US&id=2.16.756.5.30.1.127.10.3.5&effectiveDate=2015-12-14T00:00:00&format=html
 // target:
 // 2.16.756.5.30.1.127.10.3.5, 1.3.6.1.4.1.19376.1.5.3.1.3.27, 1.3.6.1.4.1.19376.1.5.3.1.3.28
@@ -374,6 +390,8 @@ group eVacDocOtherRelevantProblemsSectionContentModule(source src : Section, sou
      src.section as srcSection -> tgt.section as tgtSection then eVacDocOtherRelevantProblemsSectionContentModule(srcSection, patient, tgtSection, bundle);
 }
 
+// ///////////////////////////////////////////////////////////////////////
+// LAB SECTION
 // source: http://art-decor.org/decor/services/RetrieveTemplate?prefix=cdachvacd-&version=2017-06-13T08:50:29&language=en-US&ui=en-US&id=2.16.756.5.30.1.127.10.3.6&effectiveDate=2015-12-14T00:00:00&format=html&collapsable=true
 // target:
 // 2.16.756.5.30.1.127.10.3.6, 1.3.6.1.4.1.19376.1.3.3.2.1
@@ -386,13 +404,30 @@ group eVacDocLabSectionContentModule(source src : Section, source patient : Pati
          	  coding.system = 'http://loinc.org',
          	  coding.code = '18727-8',
          	  coding.display = 'Serology studies (set)' "coding";
-    src.text as cdaText -> tgt.text as fhirText then {
-     	cdaText -> fhirText.status = 'generated' "narrativeStatus";
-     	cdaText as t -> fhirText.div = t "narrativeText";
-     } "cdaText";
-     src.section as srcSection -> tgt.section as tgtSection then eVacDocLabSectionContentModule(srcSection, patient, tgtSection, bundle);
+  src.text as cdaText -> tgt.text as fhirText then {
+   	cdaText -> fhirText.status = 'generated' "narrativeStatus";
+   	cdaText as t -> fhirText.div = t "narrativeText";
+  } "cdaText";
+  src.section as srcSection -> tgt.section as tgtSection then eVacDocLabSectionContentModule(srcSection, patient, tgtSection, bundle);
+
+  src.entry as cdaEntry then {
+    cdaEntry.act as act then {
+      act.entryRelationship as entryRelationship then {
+        entryRelationship.organizer as organizer then {
+          organizer.component as component ->  bundle.entry as e,  e.resource = create('Observation') as observation,
+            observation.id = uuid() as uuid,
+            e.fullUrl = append('urn:uuid:',uuid),
+            tgt.entry = create('Reference') as reference, reference.type='Observation', reference.reference = append('urn:uuid:',uuid) then {
+              component.observation as cdaObs then LaborSerologyEntry(src, cdaObs, patient, observation, bundle);
+            } "entry";
+        } "organizer";
+      } "entryRelationship";
+    } "act";
+  } "cdaEntry";
 }
 
+// ///////////////////////////////////////////////////////////////////////
+// PREGNANCY SECTION
 // source: http://art-decor.org/decor/services/RetrieveTemplate?prefix=cdachvacd-&version=2017-06-13T08:50:29&language=en-US&ui=en-US&id=2.16.756.5.30.1.127.10.3.7&effectiveDate=2015-12-14T00:00:00&format=html
 // target:
 // 2.16.756.5.30.1.127.10.3.7, 	1.3.6.1.4.1.19376.1.5.3.1.1.5.3.4
@@ -409,9 +444,18 @@ group eVacDocPregnancySectionContentModule(source src : Section, source patient 
      	cdaText -> fhirText.status = 'generated' "narrativeStatus";
      	cdaText as t -> fhirText.div = t "narrativeText";
      } "cdaText";
-     src.section as srcSection -> tgt.section as tgtSection then eVacDocPregnancySectionContentModule(srcSection, patient, tgtSection, bundle);
+    src.section as srcSection -> tgt.section as tgtSection then eVacDocPregnancySectionContentModule(srcSection, patient, tgtSection, bundle);
+
+    src.entry as cdaEntryPI where (observation.templateId.where(root='1.3.6.1.4.1.19376.1.5.3.1.4.13.5')) ->  bundle.entry as e,  e.resource = create('Condition') as condition,  
+    condition.id = uuid() as uuid,
+      e.fullUrl = append('urn:uuid:',uuid), 
+      tgt.entry = create('Reference') as reference, reference.type='Condition', reference.reference = append('urn:uuid:',uuid) then {
+        cdaEntryPI.observation as observation then PregnancyEntry(src, observation, patient, condition, bundle);
+      } "cdaEntryPI";
 }
 
+// ///////////////////////////////////////////////////////////////////////
+// RECOMMENDATION SECTION
 // source: http://art-decor.org/decor/services/RetrieveTemplate?prefix=cdachvacd-&version=2017-06-13T08:50:29&language=en-US&ui=en-US&id=2.16.756.5.30.1.127.10.3.8&effectiveDate=2015-12-14T00:00:00&format=html
 // target:
 // 2.16.756.5.30.1.127.10.3.8, 1.3.6.1.4.1.19376.1.5.3.1.1.18.3.1
@@ -438,6 +482,9 @@ group eVacDocRecommendationSectionContentModule(source src : Section, source pat
     } "cdaEntryRec";
 }
 
+
+// ///////////////////////////////////////////////////////////////////////
+// NOTES SECTION
 // source: http://art-decor.org/decor/services/RetrieveTemplate?prefix=cdachvacd-&version=2017-06-13T08:50:29&language=en-US&ui=en-US&id=2.16.756.5.30.1.127.10.3.9&effectiveDate=2015-12-14T00:00:00&format=html
 // target:
 // 	2.16.756.5.30.1.127.10.3.9, 2.16.756.5.30.1.1.1:CDA-CH.Body.CodedRem
@@ -449,7 +496,7 @@ group eVacDocNotesSectionContentModule(source src : Section, source patient : Pa
            code.coding = create('Coding') as coding,
          	  coding.system = 'http://loinc.org',
          	  coding.code = '48767-8',
-         	  coding.display = '"Annotation comment [Interpretation] Narrative' "coding";
+         	  coding.display = 'Annotation comment [Interpretation] Narrative' "coding";
   src.text as cdaText -> tgt.text as fhirText then {
     cdaText -> fhirText.status = 'generated' "narrativeStatus";
     cdaText as t -> fhirText.div = t "narrativeText";
@@ -484,6 +531,8 @@ group eVacDocClinicalDocumentEncounter(source src : EncompassingEncounter, targe
   } "location";
 }
 
+// ///////////////////////////////////////////////////////////////////////
+// Document Organization
 group eVacDocClinicalDocumentOrganization(source src : CustodianOrganization, target tgt : Organization) {
   src.id -> tgt.identifier;
   src.name as v -> tgt.name = (v.other);
@@ -494,6 +543,8 @@ group eVacDocClinicalDocumentOrganization(source src : CustodianOrganization, ta
 
 // _________________________ Other Templates _________________________ 
 
+// ///////////////////////////////////////////////////////////////////////
+// CDA Patient Role
 group eVacDocClinicalDocumentPatientRole(source src : PatientRole, target tgt : Patient, target bundle : Bundle) {
   //src.id -> tgt.identifier;
   // Patient.identifier.type for EPR context, because there is only the identifier "LocalPid" allowed, LocalPid requires an type -> http://build.fhir.org/ig/hl7ch/ch-core/branches/master/StructureDefinition-ch-core-composition-patient-epr.html
@@ -533,6 +584,8 @@ group eVacDocClinicalDocumentPatientRole(source src : PatientRole, target tgt : 
   } "organization";
 }
 
+// ///////////////////////////////////////////////////////////////////////
+// CONFIDENTIALLITY CODE EXT
 // http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode
 group eVacDocChExtEprConfidentialityCode(source src: Coding, target ext: Extension) {
   src -> ext.url = 'http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode' "url";
@@ -543,16 +596,65 @@ group eVacDocChExtEprConfidentialityCode(source src: Coding, target ext: Extensi
       } "codableconcept";
 }
 
+// ///////////////////////////////////////////////////////////////////////
+// LABOR SEROLOGY ENTRY
+// http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-laboratory-serology
+group LaborSerologyEntry(source section : Section, source src : Observation, source patient : Patient, target observation : Observation, target bundle: Bundle) {
+  src -> observation.meta as meta,
+    meta.profile as profile,
+    profile.value = 'http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-laboratory-serology' "meta";
+  
+  patient -> observation.subject  = create('Reference') as reference, reference.type='Patient', reference.reference = ('urn:uuid:'+%patient.id) "patient";
+  src.id -> observation.identifier;
+  src.statusCode where (src.statuscode.where('completed')) -> observation.status = c('http://hl7.org/fhir/ValueSet/observation-status','final', 'Final');
+  //src.effectiveTime -> observation.effectiveDateTime;
+  src.effectiveTime as et -> observation.effective = create('dateTime') as value then TSDateTime(et, value) "value";
+  
+  src.code -> observation.code;
+  //src.value -> observation.value;
+  src.value as val where (src.value.value.exists()=true and src.value.code.exists()=false) -> observation.value = create('Quantity') as value then PQQuantity(val, value);
+  src.value as val where (src.value.code.exists()=true and src.value.value.exists()=false) -> observation.value = create('CodeableConcept') as value then CDCodeableConcept(val, value);
+  src.interpretationCode -> observation.interpretation;
+  src.entryRelationship as entryRelationship then {
+    entryRelationship.act as act then {
+      act.text as cdaText -> observation.note as note, note.text = cdaText;
+    } "act";
+  }"entryRelationship";
+
+  src.performer as srcAuthor then BuildPerformer(srcAuthor, observation, bundle);
+}
+
+// ///////////////////////////////////////////////////////////////////////
+// PREGNANCY ENTRY
+// http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-pregnancy
+group PregnancyEntry(source section : Section, source src : Observation, source patient : Patient, target condition : Condition, target bundle: Bundle) {
+  src -> condition.meta as meta,
+    meta.profile as profile,
+    profile.value = 'http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-pastillnesses' "meta";
+
+  patient -> condition.subject  = create('Reference') as reference, reference.type='Patient', reference.reference = ('urn:uuid:'+%patient.id) "patient";
+  src.id -> condition.identifier;
+
+  src.code -> condition.code as code,
+           code.coding = create('Coding') as coding,
+         	  coding.system = 'http://loinc.org',
+         	  coding.code = '11779-6',
+         	  coding.display = 'Delivery date Estimated from last menstrual period' "coding";
+  src.value as obsvalue -> condition.onset = create('dateTime') as value then TSDateTime(obsvalue, value) "value";
+}
 
 
+// ///////////////////////////////////////////////////////////////////////
+// PAST ILLNESS ENTRY
 // http://fhir.ch/ig/ch-vacd/StructureDefinition-ch-vacd-pastillnesses.html
-group PastIllnessEntry(source section : Section, source src : SubstanceAdministration, source patient : Patient, target pastIllness : Condition, target bundle: Bundle) {
+group PastIllnessEntry(source section : Section, source src : Act, source patient : Patient, target pastIllness : Condition, target bundle: Bundle) {
   src -> pastIllness.meta as meta,
            meta.profile as profile,
            profile.value = 'http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-pastillnesses' "meta";
            
   patient -> pastIllness.subject  = create('Reference') as reference, reference.type='Patient', reference.reference = ('urn:uuid:'+%patient.id) "patient";
   src.id -> pastIllness.identifier;
+  src.statusCode as statuscode where (src.statusCode.where('completed')) -> pastIllness.verificationStatus = cc('http://terminology.hl7.org/CodeSystem/condition-ver-status','confirmed', 'Confirmed');
   src.effectiveTime as et then {
     et.low as date -> pastIllness.recordedDate = date;
   //	et.low as date -> pastIllness.onset as onset, onset.onsetDateTime=date;
@@ -563,7 +665,7 @@ group PastIllnessEntry(source section : Section, source src : SubstanceAdministr
       observation.code as obscode then {
         obscode.code as codecode -> pastIllness.code = translate(codecode ,'http://fhir.ch/ig/evacdoc-fhir-maps/ConceptMap/evacdoc-diseases-to-vacd-diseasesandillnesses-cm','Coding');
       } "code";
-      
+      observation.statusCode as statusCode where (observation.statusCode.where('completed')) -> pastIllness.clinicalStatus = cc('http://terminology.hl7.org/CodeSystem/condition-clinical','resolved', 'Resolved');    
       //observation.effectiveTime as effectiveTime -> pastIllness.onset = create('dateTime') as value then TSDateTime(effectiveTime, value) "value";
       observation.effectiveTime as et then {
       	et.low as low-> pastIllness.onset = create('dateTime') as value then TSDateTime(low, value) "value";
@@ -590,14 +692,20 @@ group ImmunizationRecommendationEntry(source section : Section, source src : Sub
       reference.type = 'Organization',
       reference.reference = ('urn:uuid:'+%organization.id) "documentOrg";
   
-  //src.consumable as consumable then {
-  //  consumable.manufacturedProduct as manufacturedProduct then {
-  //    manufacturedProduct.manufacturedMaterial as manufacturedMaterial then {
-  //    
-  //      } "manufacturedMaterial";
-  //  } "manufacturedProduct";
-  //} "consumable";
+  src.consumable as consumable then {
+    consumable.manufacturedProduct as manufacturedProduct then {
+      manufacturedProduct.manufacturedMaterial as manufacturedMaterial then {
+        //manufacturedMaterial.name as name ->  immunizRecomm.recommendation as recommendation, recommendation.description = name;
+        manufacturedMaterial.name as mmcode then {
+          mmcode.other as codeName ->  immunizRecomm.recommendation as recommendation,
+          recommendation.vaccineCode = translate(codeName, 'http://fhir.ch/ig/evacdoc-fhir-maps/ConceptMap/evacdoc-recommendation-to-vacd-vaccination-plan-cm', 'Coding') as vco collate;
+        } "mmcode";
+      } "manufacturedMaterial";
+    } "manufacturedProduct";
+  } "consumable";
 }
+
+
 
 
 // ///////////////////////////////////////////////////////////////////////
@@ -624,81 +732,24 @@ group ImmunizationEntry(source section : Section, source src : SubstanceAdminist
   src.consumable as consumable then {
     consumable.manufacturedProduct as manufacturedProduct then {
       manufacturedProduct.manufacturedMaterial as manufacturedMaterial then {
-//        manufacturedMaterial.code as mmcode -> create('CodeableConcept') as value, CECodeableConcept(mmcode, value),
-//          immunization.vaccineCode as vaccineCode,
-//          vaccineCode.coding = translate(value.coding, 'http://fhir.ch/ig/evacdoc-fhir-maps/ConceptMap/evacdoc-to-fhir-vaccine-cm', 'Coding') "vaccineCode";
-        manufacturedMaterial.code as mmcode -> immunization.vaccineCode as vaccineCode, vaccineCode.coding = mmcode;
-        //manufacturedMaterial.code as mmcode then {
-        //  mmcode.code as mce,
-        //  mmcode.displayName as mdi,
-        //  append(mce,'|') as first "first", 
-        //  append(first, mdi) as compl "compl",
-        //  translate(compl, 'http://fhir.ch/ig/evacdoc-fhir-maps/ConceptMap/evacdoc-to-fhir-vaccine-cm', 'Coding') as code,
-        //  vaccineCode.coding = code "vaccineCode";
-        //} "mmcode";
+        //manufacturedMaterial.code as mmcode -> immunization.vaccineCode as vaccineCode, vaccineCode.coding = mmcode;
+         manufacturedMaterial.code as mmcode then {
+          mmcode.displayName as codeId -> immunization.vaccineCode as vaccineCode, vaccineCode.coding = translate(codeId, 'http://fhir.ch/ig/evacdoc-fhir-maps/ConceptMap/evacdoc-vaccine-to-vacd-vaccine-cm', 'Coding');
+        } "mmcode";
       } "manufacturedMaterial";
     } "manufacturedProduct";
   } "consumable";
   
   //src.author
-  src.author as srcAuthor ->  bundle.entry as e,
-    // create practitioner
-    e.resource = create('Practitioner') as practitioner, 
-    practitioner.id = uuid() as uuid2,
-    e.fullUrl = append('urn:uuid:',uuid2),
-    
-    // create organization
-    bundle.entry as e2,
-    e2.resource = create('Organization') as organization,
-    organization.id = uuid() as uuid3,
-    e2.fullUrl = append('urn:uuid:',uuid3),
-    
-    // create practitionerrole
-    bundle.entry as e3,
-    e3.resource = create('PractitionerRole') as practionerRole,
-    practionerRole.id = uuid() as uuid4,
-    e3.fullUrl = append('urn:uuid:',uuid4),
-    
-    // reference organization to practitionerRole
-    practionerRole.organization = create('Reference') as reference1,
-    reference1.type = 'Organization',
-    reference1.reference = ('urn:uuid:'+%organization.id),
-    
-    // reference practitioner to practitionerRole
-    practionerRole.practitioner = create('Reference') as reference2,
-    reference2.type = 'Practitioner',
-    reference2.reference = ('urn:uuid:'+%practitioner.id),
-    
-    immunization.performer as performer,
-     performer.actor  = create('Reference') as reference,
-      reference.type = 'PractitionerRole',
-      reference.reference = ('urn:uuid:'+%practionerRole.id) then {
-        srcAuthor.time as time -> reference2.extension as exttime then ChExtEprTime(time, exttime) "time";
-        srcAuthor.assignedAuthor as assignedAuthor then {
-          assignedAuthor.id -> practitioner.identifier;
-          assignedAuthor.addr -> practitioner.address;
-          assignedAuthor.addr -> organization.address;
-          assignedAuthor.telecom -> practitioner.telecom;
-          assignedAuthor.assignedPerson as person then {
-            person.name -> practitioner.name;
-            person.name -> organization.name;
-          } "name";
-          
-          //assignedAuthor.representedOrganization as srcOrg ->  bundle.entry as e4,
-          //  e4.resource = create('Organization') as organization,
-          //  organization.id = uuid() as uuid5,
-          //  e4.fullUrl = append('urn:uuid:',uuid5),
-          //  tgt.author = create('Reference') as reference3,
-          //  reference3.type='Organization',
-          //  reference3.reference = ('urn:uuid:'+%organization.id) then eVacDocClinicalDocumentOrganization(srcOrg, organization);
-        } "assignedAuthor";
-      } "srcAuthor";
+  src.author as srcAuthor then ImmunizationPerformer(srcAuthor, immunization, bundle);
+
   
   src.entryRelationship as entryRelationship then {
     entryRelationship.observation as observation then {
-      observation.code as code -> immunization.protocolApplied as protocolApplied,
-        protocolApplied.targetDisease as targetDisease,
-        targetDisease.coding = code "coding";
+      observation.code as code then {
+        code.code as codeid -> immunization.protocolApplied as protocolApplied,
+          protocolApplied.targetDisease = translate(codeid, 'http://fhir.ch/ig/evacdoc-fhir-maps/ConceptMap/evacdoc-procedure-to-vacd-disorder-cm', 'CodeableConcept');
+      } "code";
     } "observation";
   } "entryRelationship";
   
@@ -771,5 +822,109 @@ group eVacDocChExtEprDataEnterer(source src: DataEnterer, target person: Person,
   src.assignedEntity as assignedEntity -> ext.extension as ext, ext.url='enterer', ext.value = create('Reference') as reference, 
                 reference.type='Person', reference.reference = ('urn:uuid:'+%person.id) then ClinicalDocumentEntityPerson(assignedEntity, person) "person";
   src.time as time -> ext.extension as exttime then ChExtEprTime(time, exttime) "time";
+}
+
+group ImmunizationPerformer(source author: Author, target resource: Resource, target bundle: Bundle) {
+  author as srcAuthor ->  bundle.entry as e,
+    // create practitioner
+    e.resource = create('Practitioner') as practitioner, 
+    practitioner.id = uuid() as uuid2,
+    e.fullUrl = append('urn:uuid:',uuid2),
+    
+    // create organization
+    bundle.entry as e2,
+    e2.resource = create('Organization') as organization,
+    organization.id = uuid() as uuid3,
+    e2.fullUrl = append('urn:uuid:',uuid3),
+    
+    // create practitionerrole
+    bundle.entry as e3,
+    e3.resource = create('PractitionerRole') as practionerRole,
+    practionerRole.id = uuid() as uuid4,
+    e3.fullUrl = append('urn:uuid:',uuid4),
+    
+    // reference organization to practitionerRole
+    practionerRole.organization = create('Reference') as reference1,
+    reference1.type = 'Organization',
+    reference1.reference = ('urn:uuid:'+%organization.id),
+    
+    // reference practitioner to practitionerRole
+    practionerRole.practitioner = create('Reference') as reference2,
+    reference2.type = 'Practitioner',
+    reference2.reference = ('urn:uuid:'+%practitioner.id),
+    
+    resource.performer as performer,
+     performer.actor  = create('Reference') as reference,
+      reference.type = 'PractitionerRole',
+      reference.reference = ('urn:uuid:'+%practionerRole.id) then {
+        srcAuthor.time as time -> reference2.extension as exttime then ChExtEprTime(time, exttime) "time";
+        srcAuthor.assignedAuthor as assignedAuthor then {
+          assignedAuthor.id -> practitioner.identifier;
+          assignedAuthor.addr -> practitioner.address;
+          assignedAuthor.addr -> organization.address;
+          assignedAuthor.telecom -> practitioner.telecom;
+          assignedAuthor.assignedPerson as person then {
+            person.name -> practitioner.name;
+            person.name -> organization.name;
+          } "name";
+          
+          //assignedAuthor.representedOrganization as srcOrg ->  bundle.entry as e4,
+          //  e4.resource = create('Organization') as organization,
+          //  organization.id = uuid() as uuid5,
+          //  e4.fullUrl = append('urn:uuid:',uuid5),
+          //  tgt.author = create('Reference') as reference3,
+          //  reference3.type='Organization',
+          //  reference3.reference = ('urn:uuid:'+%organization.id) then eVacDocClinicalDocumentOrganization(srcOrg, organization);
+        } "assignedAuthor";
+      } "srcAuthor";
+}
+
+group BuildPerformer(source author: Author, target resource: Resource, target bundle: Bundle) {
+  author as srcAuthor ->  bundle.entry as e,
+    // create practitioner
+    e.resource = create('Practitioner') as practitioner, 
+    practitioner.id = uuid() as uuid2,
+    e.fullUrl = append('urn:uuid:',uuid2),
+    
+    // create organization
+    bundle.entry as e2,
+    e2.resource = create('Organization') as organization,
+    organization.id = uuid() as uuid3,
+    e2.fullUrl = append('urn:uuid:',uuid3),
+    
+    // create practitionerrole
+    bundle.entry as e3,
+    e3.resource = create('PractitionerRole') as practionerRole,
+    practionerRole.id = uuid() as uuid4,
+    e3.fullUrl = append('urn:uuid:',uuid4),
+    
+    // reference organization to practitionerRole
+    practionerRole.organization = create('Reference') as reference1,
+    reference1.type = 'Organization',
+    reference1.reference = ('urn:uuid:'+%organization.id),
+    
+    // reference practitioner to practitionerRole
+    practionerRole.practitioner = create('Reference') as reference2,
+    reference2.type = 'Practitioner',
+    reference2.reference = ('urn:uuid:'+%practitioner.id),
+    
+    resource.performer = create('Reference') as reference,
+      reference.type = 'PractitionerRole',
+      reference.reference = ('urn:uuid:'+%practionerRole.id) then {
+        srcAuthor.time as time -> reference2.extension as exttime then ChExtEprTime(time, exttime) "time";
+        srcAuthor.assignedEntity as assignedEntity then {
+          assignedEntity.id -> practitioner.identifier;
+          assignedEntity.addr -> practitioner.address;
+          assignedEntity.addr -> organization.address;
+          assignedEntity.telecom -> practitioner.telecom;
+          assignedEntity.assignedPerson as person then {
+            person.name -> practitioner.name;
+          } "assignedPerson";
+          assignedEntity.representedOrganization as representedOrganization then {
+            representedOrganization.name as name -> organization.name = name;
+          } "representedOrganization";
+          
+        } "assignedAuthor";
+      } "srcAuthor";
 }
 

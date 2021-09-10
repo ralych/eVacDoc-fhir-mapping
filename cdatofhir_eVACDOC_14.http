@@ -17,6 +17,58 @@ Content-Type: text/fhir-mapping
 < ./input/maps/eVacDocToBundle.map
 
 
+### 5c. Transform labser
+POST {{host}}/StructureMap/$transform?source=http://fhir.ch/ig/evacdoc-fhir-maps/StructureMap/eVacDocToBundle
+Accept: application/fhir+json;fhirVersion=4.0
+Content-Type: application/fhir+xml;fhirVersion=4.0
+
+< ./example/extendes_evacdoc_labser.xml
+
+
+################################
+
+### 5a. Transform immun section
+POST {{host}}/StructureMap/$transform?source=http://fhir.ch/ig/evacdoc-fhir-maps/StructureMap/eVacDocToBundle
+Accept: application/fhir+json;fhirVersion=4.0
+Content-Type: application/fhir+xml;fhirVersion=4.0
+
+< ./example/reduced_RL_eVacDoc_immun.xml
+
+### 5b. Transform recomm section
+POST {{host}}/StructureMap/$transform?source=http://fhir.ch/ig/evacdoc-fhir-maps/StructureMap/eVacDocToBundle
+Accept: application/fhir+json;fhirVersion=4.0
+Content-Type: application/fhir+xml;fhirVersion=4.0
+
+< ./example/reduced_RL_eVacDoc_recomm.xml
+
+
+### 5c. Transform pastillness section
+POST {{host}}/StructureMap/$transform?source=http://fhir.ch/ig/evacdoc-fhir-maps/StructureMap/eVacDocToBundle
+Accept: application/fhir+json;fhirVersion=4.0
+Content-Type: application/fhir+xml;fhirVersion=4.0
+
+< ./example/reduced_RL_eVacDoc_pastill.xml
+
+
+### 5c. Transform pregnancy section
+POST {{host}}/StructureMap/$transform?source=http://fhir.ch/ig/evacdoc-fhir-maps/StructureMap/eVacDocToBundle
+Accept: application/fhir+json;fhirVersion=4.0
+Content-Type: application/fhir+xml;fhirVersion=4.0
+
+< ./example/extendes_evacdoc_preg.xml
+
+
+
+### 5d. Transform Vaccination Record document (myvaccines, v1.4) from CDA to FHIR
+POST {{host}}/StructureMap/$transform?source=http://fhir.ch/ig/evacdoc-fhir-maps/StructureMap/eVacDocToBundle
+Accept: application/fhir+json;fhirVersion=4.0
+Content-Type: application/fhir+xml;fhirVersion=4.0
+
+< ./example/19681110_Luykx_Roeland_eVacDoc.xml
+
+
+
+
 ### 2. POST ConceptMap
 POST {{host}}/ConceptMap HTTP/1.1
 Accept: application/fhir+json;fhirVersion=4.0
@@ -25,20 +77,8 @@ Content-Type: application/fhir+json;fhirVersion=4.0
 < ./input/resources/conceptmap/evacdoc-diseases-diseasesandillnesses-cm.json
 
 
+
+
 ### 3. GET ConceptMap
 GET {{host}}/ConceptMap HTTP/1.1
 Accept: application/fhir+json;fhirVersion=4.0
-
-### 5a. Transform Vaccination Record document (myvaccines, v1.4) from CDA to FHIR
-POST {{host}}/StructureMap/$transform?source=http://fhir.ch/ig/evacdoc-fhir-maps/StructureMap/eVacDocToBundle
-Accept: application/fhir+json;fhirVersion=4.0
-Content-Type: application/fhir+xml;fhirVersion=4.0
-
-< ./example/reduced_RL_eVacDoc.xml
-
-### 5b. Transform Vaccination Record document (myvaccines, v1.4) from CDA to FHIR
-POST {{host}}/StructureMap/$transform?source=http://fhir.ch/ig/evacdoc-fhir-maps/StructureMap/eVacDocToBundle
-Accept: application/fhir+json;fhirVersion=4.0
-Content-Type: application/fhir+xml;fhirVersion=4.0
-
-< ./example/19681110_Luykx_Roeland_eVacDoc.xml
