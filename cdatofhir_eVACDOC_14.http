@@ -22,7 +22,7 @@ POST {{host}}/StructureMap/$transform?source=http://fhir.ch/ig/evacdoc-fhir-maps
 Accept: application/fhir+json;fhirVersion=4.0
 Content-Type: application/fhir+xml;fhirVersion=4.0
 
-< ./example/extendes_evacdoc_labser.xml
+< ./example/extendes_evacdoc_allergies.xml
 
 
 ################################
@@ -58,6 +58,12 @@ Content-Type: application/fhir+xml;fhirVersion=4.0
 < ./example/extendes_evacdoc_preg.xml
 
 
+### 5c. Transform labser
+POST {{host}}/StructureMap/$transform?source=http://fhir.ch/ig/evacdoc-fhir-maps/StructureMap/eVacDocToBundle
+Accept: application/fhir+json;fhirVersion=4.0
+Content-Type: application/fhir+xml;fhirVersion=4.0
+
+< ./example/extendes_evacdoc_labser.xml
 
 ### 5d. Transform Vaccination Record document (myvaccines, v1.4) from CDA to FHIR
 POST {{host}}/StructureMap/$transform?source=http://fhir.ch/ig/evacdoc-fhir-maps/StructureMap/eVacDocToBundle
@@ -76,7 +82,26 @@ Content-Type: application/fhir+json;fhirVersion=4.0
 
 < ./input/resources/conceptmap/evacdoc-diseases-diseasesandillnesses-cm.json
 
+### 2. POST ConceptMap
+POST {{host}}/ConceptMap HTTP/1.1
+Accept: application/fhir+json;fhirVersion=4.0
+Content-Type: application/fhir+json;fhirVersion=4.0
 
+< ./input/resources/conceptmap/evacdoc-allergy-to-vacd-allergy-code-cm.json
+
+### 2. POST ConceptMap
+POST {{host}}/ConceptMap HTTP/1.1
+Accept: application/fhir+json;fhirVersion=4.0
+Content-Type: application/fhir+json;fhirVersion=4.0
+
+< ./input/resources/conceptmap/evacdoc-allergycode-to-chvacd-allergycategorie-cm.json
+
+### 2. POST ConceptMap
+POST {{host}}/ConceptMap HTTP/1.1
+Accept: application/fhir+json;fhirVersion=4.0
+Content-Type: application/fhir+json;fhirVersion=4.0
+
+< ./input/resources/conceptmap/evacdoc-allergycode-to-chvacd-allergytype-cm.json
 
 
 ### 3. GET ConceptMap

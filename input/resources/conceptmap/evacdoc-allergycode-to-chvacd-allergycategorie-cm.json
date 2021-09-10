@@ -1,0 +1,42 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "evacdoc-allergycode-to-chvacd-allergycategorie-cm",
+  "url": "http://fhir.ch/ig/evacdoc-fhir-maps/ConceptMap/evacdoc-allergycode-to-chvacd-allergycategorie-cm",
+  "name": "eVacDocAllergyToCHVACDAllergyCategoryMapping",
+  "title": "eVacDoc allergy to ch-vacd allergy category mapping",
+  "status": "draft",
+  "sourceUri": "2.16.840.1.113883.5.4",
+  "targetUri": "http://hl7.org/fhir/allergy-intolerance-category",
+  "group": [
+    {
+      "source": "2.16.840.1.113883.5.4",
+      "target": "http://hl7.org/fhir/allergy-intolerance-category",
+      "element": [
+        {
+          "code": "FALG",
+          "display": "Food Allergy",
+          "target": [
+            {
+              "code": "food",
+              "display": "Food",
+              "equivalence": "equivalent",
+              "comment": "Any substance consumed to provide nutritional support for the body."
+            }
+          ]
+        },
+        {
+          "code": "DINT",
+          "display": "Drug Intolerance",
+          "target": [
+            {
+              "code": "medication",
+              "display": "Medication",
+              "equivalence": "equivalent",
+              "comment": "Substances administered to achieve a physiological effect."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

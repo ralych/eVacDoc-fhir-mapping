@@ -1,0 +1,42 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "evacdoc-allergycode-to-chvacd-allergytype-cm",
+  "url": "http://fhir.ch/ig/evacdoc-fhir-maps/ConceptMap/evacdoc-allergycode-to-chvacd-allergytype-cm",
+  "name": "eVacDocAllergyToCHVACDAllergyTypeMapping",
+  "title": "eVacDoc allergy to ch-vacd allergy type mapping",
+  "status": "draft",
+  "sourceUri": "2.16.840.1.113883.5.4",
+  "targetUri": "http://hl7.org/fhir/allergy-intolerance-type",
+  "group": [
+    {
+      "source": "2.16.840.1.113883.5.4",
+      "target": "http://hl7.org/fhir/allergy-intolerance-type",
+      "element": [
+        {
+          "code": "FALG",
+          "display": "Food Allergy",
+          "target": [
+            {
+              "code": "allergy",
+              "display": "Allergy",
+              "equivalence": "equivalent",
+              "comment": "A propensity for hypersensitive reaction(s) to a substance. These reactions are most typically type I hypersensitivity, plus other \"allergy-like\" reactions, including pseudoallergy."
+            }
+          ]
+        },
+        {
+          "code": "DINT",
+          "display": "Drug Intolerance",
+          "target": [
+            {
+              "code": "intolerance",
+              "display": "Intolerance",
+              "equivalence": "equivalent",
+              "comment": "A propensity for adverse reactions to a substance that is not judged to be allergic or \"allergy-like\". These reactions are typically (but not necessarily) non-immune. They are to some degree idiosyncratic and/or patient-specific (i.e. are not a reaction that is expected to occur with most or all patients given similar circumstances)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

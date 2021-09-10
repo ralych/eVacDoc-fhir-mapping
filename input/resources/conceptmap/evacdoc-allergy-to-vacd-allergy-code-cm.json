@@ -1,0 +1,39 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "evacdoc-allergy-to-vacd-allergy-code-cm",
+  "url": "http://fhir.ch/ig/evacdoc-fhir-maps/ConceptMap/evacdoc-allergy-to-vacd-allergy-code-cm",
+  "name": "eVacDocAllergyToCHVACDAllergyCodeMapping",
+  "title": "eVacDoc Allergy to ch-vacd Allergy Code Mapping",
+  "status": "draft",
+  "sourceUri": "http://www.snomed.org",
+  "targetUri": "http://www.snomed.org",
+  "group": [
+    {
+      "source": "http://www.snomed.org",
+      "target": "http://www.snomed.org",
+      "element": [
+        {
+          "code": "303300008",
+          "target": [
+            {
+              "code": "213020009",
+              "display": "Allergy to egg protein (finding)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "24079001",
+          "display": "Atopic dermatitis",
+          "target": [
+            {
+              "code": "24079001",
+              "display": "Atopic dermatitis (disorder)",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

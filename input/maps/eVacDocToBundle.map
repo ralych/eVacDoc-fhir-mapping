@@ -231,7 +231,7 @@ group eVacDocClinicalDocumentComposition(source src : ClinicalDocument, target t
         
           // Medical Problems
           //2.16.756.5.30.1.127.10.3.2, 1.3.6.1.4.1.19376.1.5.3.1.3.6, 2.16.840.1.113883.10.20.1.11
-          //component.section as srcSection where (templateId.where(root='2.16.840.1.113883.10.20.1.11')) -> tgt.section as tgtSection then eVacDocMedicalProblemsSectionContentModule(srcSection, patientResource, tgtSection, bundle);
+          component.section as srcSection where (templateId.where(root='2.16.840.1.113883.10.20.1.11')) -> tgt.section as tgtSection then eVacDocMedicalProblemsSectionContentModule(srcSection, patientResource, tgtSection, bundle);
         
           // Undergone illnesses for immunization
           // 2.16.756.5.30.1.127.10.3.3, 	1.3.6.1.4.1.19376.1.5.3.1.3.8
@@ -239,7 +239,7 @@ group eVacDocClinicalDocumentComposition(source src : ClinicalDocument, target t
         
           // Allergies
           // 2.16.756.5.30.1.127.10.3.4, 1.3.6.1.4.1.19376.1.5.3.1.3.13, 2.16.840.1.113883.10.20.1.2
-          component.section as srcSection where (templateId.where(root='2.16.840.1.113883.10.20.1.2')) -> tgt.section as tgtSection then eVacDocAllergiesSectionContentModule(srcSection, patientResource, tgtSection, bundle);
+          component.section as srcSection where (templateId.where(root='1.3.6.1.4.1.19376.1.5.3.1.3.13')) -> tgt.section as tgtSection then eVacDocAllergiesSectionContentModule(srcSection, patientResource, tgtSection, bundle);
         
           // Other relevant observations
           // 2.16.756.5.30.1.127.10.3.5, 1.3.6.1.4.1.19376.1.5.3.1.3.27, 1.3.6.1.4.1.19376.1.5.3.1.3.28
@@ -356,16 +356,23 @@ group eVacDocAllergiesSectionContentModule(source src : Section, source patient 
 	src.id as id -> tgt.extension as ext then ChExtEprSectionId(id, ext) "sectionId";
 	src.title as t -> tgt.title = 'Allergies' "title";//(t.dataString);
 	//src.code -> tgt.code;
-	ssrc.code -> tgt.code as code,
-           code.coding = create('Coding') as coding,
-         	  coding.system = 'http://loinc.org',
-         	  coding.code = '48765-2',
-         	  coding.display = 'Allergies and adverse reactions Document' "coding";
-     src.text as cdaText -> tgt.text as fhirText then {
-     	cdaText -> fhirText.status = 'generated' "narrativeStatus";
-     	cdaText as t -> fhirText.div = t "narrativeText";
-     } "cdaText";
-     src.section as srcSection -> tgt.section as tgtSection then eVacDocAllergiesSectionContentModule(srcSection, patient, tgtSection, bundle);
+	src.code -> tgt.code as code,
+    code.coding = create('Coding') as coding,
+    coding.system = 'http://loinc.org',
+    coding.code = '48765-2',
+    coding.display = 'Allergies and adverse reactions Document' "coding";
+  src.text as cdaText -> tgt.text as fhirText then {
+   	cdaText -> fhirText.status = 'generated' "narrativeStatus";
+   	cdaText as t -> fhirText.div = t "narrativeText";
+  } "cdaText";
+  src.section as srcSection -> tgt.section as tgtSection then eVacDocAllergiesSectionContentModule(srcSection, patient, tgtSection, bundle);
+
+  src.entry as cdaEntryPI where (act.templateId.where(root='1.3.6.1.4.1.19376.1.5.3.1.4.5.3')) ->  bundle.entry as e,  e.resource = create('AllergyIntolerance') as allergy,
+    allergy.id = uuid() as uuid,
+    e.fullUrl = append('urn:uuid:',uuid), 
+    tgt.entry = create('Reference') as reference, reference.type='AllergyIntolerance', reference.reference = append('urn:uuid:',uuid) then {
+      cdaEntryPI.act as act then AllergyIntoleranceEntry(src, act, patient, allergy, bundle);
+    } "cdaEntryPI";
 }
 
 
@@ -641,6 +648,33 @@ group PregnancyEntry(source section : Section, source src : Observation, source 
          	  coding.code = '11779-6',
          	  coding.display = 'Delivery date Estimated from last menstrual period' "coding";
   src.value as obsvalue -> condition.onset = create('dateTime') as value then TSDateTime(obsvalue, value) "value";
+}
+
+
+// ///////////////////////////////////////////////////////////////////////
+// ALLERGY ENTRY
+// http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-allergyintolerances
+group AllergyIntoleranceEntry(source section : Section, source src : Act, source patient : Patient, target allergy : AllergyIntolerance, target bundle: Bundle) {
+  src -> allergy.meta as meta,
+    meta.profile as profile,
+    profile.value = 'http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-allergyintolerances' "meta";
+
+  src.id -> allergy.identifier;
+
+  src.text as cdaText -> allergy.note as note, note.text = cdaText;
+  
+  src.entryRelationship as entryRelationship then {
+    entryRelationship.observation as observation then {
+      observation.value as value then {
+        value.code as cdaCode -> allergy.code as code, code.coding = translate(cdaCode, 'http://fhir.ch/ig/evacdoc-fhir-maps/ConceptMap/evacdoc-allergy-to-vacd-allergy-code-cm', 'Coding');
+      } "value";
+
+      observation.code as cdaCode then {
+        cdaCode.code as cc -> allergy.category = translate(cc, 'http://fhir.ch/ig/evacdoc-fhir-maps/ConceptMap/evacdoc-allergycode-to-chvacd-allergycategorie-cm', 'code');
+        cdaCode.code as cc -> allergy.type = translate(cc, 'http://fhir.ch/ig/evacdoc-fhir-maps/ConceptMap/evacdoc-allergycode-to-chvacd-allergytype-cm', 'code');
+      } "cdaCode";
+    } "observation";
+  } "entryRelationship";
 }
 
 

@@ -1,195 +1,227 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-	<id value="ch.fhir.ig.evacdoc-fhir-maps" />
-	<text>
-		<status value="additional" />
-		<div xmlns="http://www.w3.org/1999/xhtml">
-			Implementation Guide for mapping eVACDOC to ch-vacd
-			FHIR Bundle
-		</div>
-	</text>
-	<url
-		value="http://fhir.ch/ig/evacdoc-fhir-maps/ImplementationGuide/ch.fhir.ig.evacdoc-fhir-maps" />
-	<version value="0.1.1" />
-	<name value="EVACDOC_FHIR_MAPS" />
-	<title value="EVACDOC-FHIR-Maps (R4)" />
-	<status value="active" />
-	<experimental value="false" />
-	<date value="2021-08-06" />
-	<publisher value="RALY GmbH" />
-	<contact>
-		<name value="RALY GmbH" />
-		<telecom>
-			<system value="url" />
-			<value value="http://www.raly.ch/" />
-		</telecom>
-	</contact>
-	<copyright value="CC-BY-SA-4.0" />
-	<packageId value="ch.fhir.ig.evacdoc-fhir-maps" />
-	<license value="CC-BY-SA-4.0" />
-	<fhirVersion value="4.0.1" />
-	<dependsOn id="cdacore">
-		<uri
-			value="http://hl7.org/fhir/cda/ImplementationGuide/hl7.fhir.cda" />
-		<packageId value="hl7.fhir.cda" />
-		<version value="dev" />
-	</dependsOn>
-	<dependsOn id="chvacd">
-		<uri
-			value="http://fhir.ch/ig/ch-vacd/ImplementationGuide/ch.fhir.ig.ch-vacd" />
-		<packageId value="ch.fhir.ig.ch-vacd" />
-		<version value="1.0.0" />
-	</dependsOn>
-	<dependsOn id="cdafhirmaps">
-		<uri
-			value="http://fhir.ch/ig/cda-fhir-maps/ImplementationGuide/ch.fhir.ig.cda-fhir-maps" />
-		<packageId value="ch.fhir.ig.cda-fhir-maps" />
-		<version value="0.2.0" />
-	</dependsOn>
-	<definition>
-		<!-- References to structure maps -->
-		<resource>
-			<reference>
-				<reference value="StructureMap/eVacDocToBundle" />
-			</reference>
-			<name value="eVacDocToBundle" />
-			<description value="CDA Document to FHIR Bundle" />
-		</resource>
+  <id value="ch.fhir.ig.evacdoc-fhir-maps" />
+  <text>
+    <status value="additional" />
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      Implementation Guide for mapping eVACDOC to ch-vacd
+      FHIR Bundle
+    </div>
+  </text>
+  <url
+    value="http://fhir.ch/ig/evacdoc-fhir-maps/ImplementationGuide/ch.fhir.ig.evacdoc-fhir-maps" />
+  <version value="0.1.1" />
+  <name value="EVACDOC_FHIR_MAPS" />
+  <title value="EVACDOC-FHIR-Maps (R4)" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2021-08-06" />
+  <publisher value="RALY GmbH" />
+  <contact>
+    <name value="RALY GmbH" />
+    <telecom>
+      <system value="url" />
+      <value value="http://www.raly.ch/" />
+    </telecom>
+  </contact>
+  <copyright value="CC-BY-SA-4.0" />
+  <packageId value="ch.fhir.ig.evacdoc-fhir-maps" />
+  <license value="CC-BY-SA-4.0" />
+  <fhirVersion value="4.0.1" />
+  <dependsOn id="cdacore">
+    <uri
+      value="http://hl7.org/fhir/cda/ImplementationGuide/hl7.fhir.cda" />
+    <packageId value="hl7.fhir.cda" />
+    <version value="dev" />
+  </dependsOn>
+  <dependsOn id="chvacd">
+    <uri
+      value="http://fhir.ch/ig/ch-vacd/ImplementationGuide/ch.fhir.ig.ch-vacd" />
+    <packageId value="ch.fhir.ig.ch-vacd" />
+    <version value="1.0.0" />
+  </dependsOn>
+  <dependsOn id="cdafhirmaps">
+    <uri
+      value="http://fhir.ch/ig/cda-fhir-maps/ImplementationGuide/ch.fhir.ig.cda-fhir-maps" />
+    <packageId value="ch.fhir.ig.cda-fhir-maps" />
+    <version value="0.2.0" />
+  </dependsOn>
+  <definition>
+    <!-- References to structure maps -->
+    <resource>
+      <reference>
+        <reference value="StructureMap/eVacDocToBundle" />
+      </reference>
+      <name value="eVacDocToBundle" />
+      <description value="CDA Document to FHIR Bundle" />
+    </resource>
 
-		<!-- CodeSystems -->
-		<resource>
-			<reference>
-				<reference value="CodeSystem/evacdoc-vaccines-cs" />
-			</reference>
-			<name value="eVacDocVaccinesCodeSystem" />
-			<description value="eVACDOC vaccine code system" />
-		</resource>
+    <!-- CodeSystems -->
+    <resource>
+      <reference>
+        <reference value="CodeSystem/evacdoc-vaccines-cs" />
+      </reference>
+      <name value="eVacDocVaccinesCodeSystem" />
+      <description value="eVACDOC vaccine code system" />
+    </resource>
 
-		<!-- ValueSets -->
-		<resource>
-			<reference>
-				<reference value="ValueSet/evacdoc-vaccines-vs" />
-			</reference>
-			<name value="eVacDocVaccinesValueSet" />
-			<description value="eVACDOC vaccine value set" />
-		</resource>
+    <!-- ValueSets -->
+    <resource>
+      <reference>
+        <reference value="ValueSet/evacdoc-vaccines-vs" />
+      </reference>
+      <name value="eVacDocVaccinesValueSet" />
+      <description value="eVACDOC vaccine value set" />
+    </resource>
 
-		<!-- Concept Maps -->
-		<resource>
-			<reference>
-				<reference
-					value="ConceptMap/authorRole-isco-to-snomedct-cm" />
-			</reference>
-			<name value="eVACDOCConfidentialityCodeToEprFhirCode" />
-			<description
-				value="eVACDOC Confidentiality Code to EPR FHIR Code" />
-		</resource>
+    <!-- Concept Maps -->
+    <resource>
+      <reference>
+        <reference
+          value="ConceptMap/authorRole-isco-to-snomedct-cm" />
+      </reference>
+      <name value="eVACDOCConfidentialityCodeToEprFhirCode" />
+      <description
+        value="eVACDOC Confidentiality Code to EPR FHIR Code" />
+    </resource>
 
-		<resource>
-			<reference>
-				<reference value="ConceptMap/cm-v3-administrative-gender" />
-			</reference>
-			<name value="eVACDOCConfidentialityCodeToEprFhirCode" />
-			<description
-				value="eVACDOC Confidentiality Code to EPR FHIR Code" />
-		</resource>
+    <resource>
+      <reference>
+        <reference
+          value="ConceptMap/cm-v3-administrative-gender" />
+      </reference>
+      <name value="eVACDOCConfidentialityCodeToEprFhirCode" />
+      <description
+        value="eVACDOC Confidentiality Code to EPR FHIR Code" />
+    </resource>
 
-		<resource>
-			<reference>
-				<reference value="ConceptMap/evacdoc-confidentiality-fhir" />
-			</reference>
-			<name value="eVACDOCConfidentialityCodeToEprFhirCode" />
-			<description
-				value="eVACDOC Confidentiality Code to EPR FHIR Code" />
-		</resource>
+    <resource>
+      <reference>
+        <reference
+          value="ConceptMap/evacdoc-confidentiality-fhir" />
+      </reference>
+      <name value="eVACDOCConfidentialityCodeToEprFhirCode" />
+      <description
+        value="eVACDOC Confidentiality Code to EPR FHIR Code" />
+    </resource>
 
-		<resource>
-			<reference>
-				<reference
-					value="ConceptMap/evacdoc-diseases-to-vacd-diseasesandillnesses-cm" />
-			</reference>
-			<name value="eVacDocDiseaseToCHVACDDiseaseMap" />
-			<description
-				value="eVacDoc Disease to ch-vacd Disease Map" />
-		</resource>
+    <resource>
+      <reference>
+        <reference
+          value="ConceptMap/evacdoc-diseases-to-vacd-diseasesandillnesses-cm" />
+      </reference>
+      <name value="eVacDocDiseaseToCHVACDDiseaseMap" />
+      <description
+        value="eVacDoc Disease to ch-vacd Disease Map" />
+    </resource>
 
-		<resource>
-			<reference>
-				<reference
-					value="ConceptMap/evacdoc-procedure-to-vacd-disorder-cm" />
-			</reference>
-			<name value="eVacDocDiseaseSnomedCTProceduretoCHVACDDisorderMap" />
-			<description
-				value="eVacDoc Disease SnomedCT Procedure to ch-vacd SnomedCT Disorder Map" />
-		</resource>
+    <resource>
+      <reference>
+        <reference
+          value="ConceptMap/evacdoc-procedure-to-vacd-disorder-cm" />
+      </reference>
+      <name
+        value="eVacDocDiseaseSnomedCTProceduretoCHVACDDisorderMap" />
+      <description
+        value="eVacDoc Disease SnomedCT Procedure to ch-vacd SnomedCT Disorder Map" />
+    </resource>
 
-		<resource>
-			<reference>
-				<reference
-					value="ConceptMap/evacdoc-recommendation-to-vacd-vaccination-plan-cm" />
-			</reference>
-			<name value="eVacDocRecommendationToCHVACDVaccinationPlanMap" />
-			<description
-				value="eVacDoc Recommendation to CHVACD Vaccination Plan Map" />
-		</resource>
+    <resource>
+      <reference>
+        <reference
+          value="ConceptMap/evacdoc-recommendation-to-vacd-vaccination-plan-cm" />
+      </reference>
+      <name value="eVacDocRecommendationToCHVACDVaccinationPlanMap" />
+      <description
+        value="eVacDoc Recommendation to CHVACD Vaccination Plan Map" />
+    </resource>
 
-		<resource>
-			<reference>
-				<reference
-					value="ConceptMap/evacdoc-vaccine-to-vacd-vaccine-cm" />
-			</reference>
-			<name value="eVacDocVaccineToCHVACDVaccineConceptMap" />
-			<description
-				value="eVacDoc Vaccine to ch-vacd Vaccine Concept Map" />
-		</resource>
+    <resource>
+      <reference>
+        <reference
+          value="ConceptMap/evacdoc-vaccine-to-vacd-vaccine-cm" />
+      </reference>
+      <name value="eVacDocVaccineToCHVACDVaccineConceptMap" />
+      <description
+        value="eVacDoc Vaccine to ch-vacd Vaccine Concept Map" />
+    </resource>
 
+    <resource>
+      <reference>
+        <reference
+          value="ConceptMap/evacdoc-allergy-to-vacd-allergy-code-cm" />
+      </reference>
+      <name value="eVacDocVaccineToCHVACDVaccineConceptMap" />
+      <description
+        value="eVacDoc Vaccine to ch-vacd Vaccine Concept Map" />
+    </resource>
 
-		<resource>
-			<reference>
-				<reference
-					value="StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code" />
-			</reference>
-			<name value="EVACDOCExtensionManufacturedMaterialCode" />
-			<description
-				value="eVACDOC Extension Manufactured Material Code" />
-		</resource>
+    <resource>
+      <reference>
+        <reference
+          value="ConceptMap/evacdoc-allergycode-to-chvacd-allergycategorie-cm" />
+      </reference>
+      <name value="eVacDocAllergyToCHVACDAllergyCategoryMappingp" />
+      <description
+        value="eVacDoc allergy to ch-vacd allergy category mapping" />
+    </resource>
+    
+    <resource>
+      <reference>
+        <reference
+          value="ConceptMap/evacdoc-allergycode-to-chvacd-allergytype-cm" />
+      </reference>
+      <name value="eVacDocAllergyToCHVACDAllergyTypeMapping" />
+      <description
+        value="eVacDoc allergy to ch-vacd allergy type mapping" />
+    </resource>
 
-		<!-- pages -->
-		<page>
-			<nameUrl value="toc.html" />
-			<title value="Table of Contents" />
-			<generation value="html" />
-			<page>
-				<nameUrl value="index.html" />
-				<title value="Home" />
-				<generation value="markdown" />
-			</page>
-			<page>
-				<nameUrl value="maps.html" />
-				<title value="Maps" />
-				<generation value="html" />
-			</page>
-			<page>
-				<nameUrl value="terminology.html" />
-				<title value="Terminology" />
-				<generation value="html" />
-			</page>
-		</page>
+    <resource>
+      <reference>
+        <reference
+          value="StructureDefinition/evacdoc-fhir-maps-ext-manufacturedmaterial-code" />
+      </reference>
+      <name value="EVACDOCExtensionManufacturedMaterialCode" />
+      <description
+        value="eVACDOC Extension Manufactured Material Code" />
+    </resource>
 
-		<!-- parameters -->
-		<parameter>
-			<code value="releaselabel" />
-			<value value="CI build" />
-			<!--<value value="Draft Standard for Trial Use"/> -->
-		</parameter>
-		<parameter>
-			<code value="path-pages" />
-			<value value="input/pages" />
-		</parameter>
-		<parameter>
-			<code value="copyrightyear" />
-			<value value="2021+" />
-		</parameter>
-	</definition>
+    <!-- pages -->
+    <page>
+      <nameUrl value="toc.html" />
+      <title value="Table of Contents" />
+      <generation value="html" />
+      <page>
+        <nameUrl value="index.html" />
+        <title value="Home" />
+        <generation value="markdown" />
+      </page>
+      <page>
+        <nameUrl value="maps.html" />
+        <title value="Maps" />
+        <generation value="html" />
+      </page>
+      <page>
+        <nameUrl value="terminology.html" />
+        <title value="Terminology" />
+        <generation value="html" />
+      </page>
+    </page>
+
+    <!-- parameters -->
+    <parameter>
+      <code value="releaselabel" />
+      <value value="CI build" />
+      <!--<value value="Draft Standard for Trial Use"/> -->
+    </parameter>
+    <parameter>
+      <code value="path-pages" />
+      <value value="input/pages" />
+    </parameter>
+    <parameter>
+      <code value="copyrightyear" />
+      <value value="2021+" />
+    </parameter>
+  </definition>
 </ImplementationGuide>
