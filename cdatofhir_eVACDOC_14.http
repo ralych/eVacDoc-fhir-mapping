@@ -17,12 +17,12 @@ Content-Type: text/fhir-mapping
 < ./input/maps/eVacDocToBundle.map
 
 
-### 5c. Transform labser
+### 5c. Transform complete
 POST {{host}}/StructureMap/$transform?source=http://fhir.ch/ig/evacdoc-fhir-maps/StructureMap/eVacDocToBundle
 Accept: application/fhir+json;fhirVersion=4.0
 Content-Type: application/fhir+xml;fhirVersion=4.0
 
-< ./example/extendes_evacdoc_allergies.xml
+< ./example/extendes_evacdoc.xml
 
 
 ################################
@@ -65,13 +65,28 @@ Content-Type: application/fhir+xml;fhirVersion=4.0
 
 < ./example/extendes_evacdoc_labser.xml
 
+
+### 5c. Transform allergies
+POST {{host}}/StructureMap/$transform?source=http://fhir.ch/ig/evacdoc-fhir-maps/StructureMap/eVacDocToBundle
+Accept: application/fhir+json;fhirVersion=4.0
+Content-Type: application/fhir+xml;fhirVersion=4.0
+
+< ./example/extendes_evacdoc_allergies.xml
+
+### 5c. Transform med problems
+POST {{host}}/StructureMap/$transform?source=http://fhir.ch/ig/evacdoc-fhir-maps/StructureMap/eVacDocToBundle
+Accept: application/fhir+json;fhirVersion=4.0
+Content-Type: application/fhir+xml;fhirVersion=4.0
+
+< ./example/extendes_evacdoc_problems.xml
+
+
 ### 5d. Transform Vaccination Record document (myvaccines, v1.4) from CDA to FHIR
 POST {{host}}/StructureMap/$transform?source=http://fhir.ch/ig/evacdoc-fhir-maps/StructureMap/eVacDocToBundle
 Accept: application/fhir+json;fhirVersion=4.0
 Content-Type: application/fhir+xml;fhirVersion=4.0
 
 < ./example/19681110_Luykx_Roeland_eVacDoc.xml
-
 
 
 

@@ -140,7 +140,7 @@ group eVacDocClinicalDocumentComposition(source src : ClinicalDocument, target t
         // Immunization Administration
         component.section as srcSection where (templateId.where(root = '1.3.6.1.4.1.19376.1.5.3.1.3.23')) -&gt; tgt.section as tgtSection then eVacDocImmunizationSectionContentModule(srcSection, patientResource, tgtSection, bundle);
         // Medical Problems
-        component.section as srcSection where (templateId.where(root = '2.16.840.1.113883.10.20.1.11')) -&gt; tgt.section as tgtSection then eVacDocMedicalProblemsSectionContentModule(srcSection, patientResource, tgtSection, bundle);
+        component.section as srcSection where (templateId.where(root = '1.3.6.1.4.1.19376.1.5.3.1.3.6')) -&gt; tgt.section as tgtSection then eVacDocMedicalProblemsSectionContentModule(srcSection, patientResource, tgtSection, bundle);
         // Undergone illnesses for immunization
         component.section as srcSection where (templateId.where(root = '1.3.6.1.4.1.19376.1.5.3.1.3.8')) -&gt; tgt.section as tgtSection then eVacDocPastIllnessSectionContentModule(srcSection, patientResource, tgtSection, bundle);
         // Allergies
@@ -196,6 +196,9 @@ group eVacDocMedicalProblemsSectionContentModule(source src : Section, source pa
     cdaText as t -&gt; fhirText.div = t "narrativeText";
   } "cdaText";
   src.section as srcSection -&gt; tgt.section as tgtSection then eVacDocMedicalProblemsSectionContentModule(srcSection, patient, tgtSection, bundle);
+  src.entry as cdaEntryPI where (act.templateId.where(root = '1.3.6.1.4.1.19376.1.5.3.1.4.5.2')) -&gt;  bundle.entry as e,  e.resource = create('Condition') as pastIllness,  pastIllness.id = uuid() as uuid,  e.fullUrl = append('urn:uuid:', uuid),  tgt.entry = create('Reference') as reference,  reference.type = 'Condition',  reference.reference = append('urn:uuid:', uuid) then {
+    cdaEntryPI.act as act then MedicalProblemEntry(src, act, patient, pastIllness, bundle);
+  } "cdaEntryPI";
 }
 
 // ///////////////////////////////////////////////////////////////////////
@@ -419,6 +422,27 @@ group eVacDocChExtEprConfidentialityCode(source src : Coding, target ext : Exten
     src.code as sc -&gt;  coding.code as cc,  cc.value = sc;
     src.display as sd -&gt;  coding.display as cd,  cd.value = sd;
   } "codableconcept";
+}
+
+// ///////////////////////////////////////////////////////////////////////
+// MEDICAL PROBLEM ENTRY
+// http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-medical-problems
+group MedicalProblemEntry(source section : Section, source src : Act, source patient : Patient, target condition : Condition, target bundle : Bundle) {
+  src -&gt;  condition.meta as meta,  meta.profile as profile,  profile.value = 'http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-medical-problems' "meta";
+  patient -&gt;  condition.subject = create('Reference') as reference,  reference.type = 'Patient',  reference.reference = ('urn:uuid:' + %patient.id) "patient";
+  src.id -&gt; condition.identifier;
+  src.effectiveTime as et then {
+    et.low as date -&gt; condition.recordedDate as rd then TSDateTime(date, rd) "value";
+  };
+  src.entryRelationship as entryRelationship then {
+    entryRelationship.observation as observation then {
+      observation.value as value -&gt; condition.code as cc then CDCodeableConcept(value, cc);
+      observation.effectiveTime as et then {
+        et.low as date -&gt; condition.abatement = create('dateTime') as value then TSDateTime(date, value) "value";
+      };
+    };
+  };
+  src.statusCode where (src.statusCode.code.where('active')) -&gt; condition.clinicalStatus = cc('http://terminology.hl7.org/CodeSystem/condition-clinical', 'active', 'Active');
 }
 
 // ///////////////////////////////////////////////////////////////////////
@@ -2182,7 +2206,7 @@ Composition"></documentation>
               <context value="component"></context>
               <element value="section"></element>
               <variable value="srcSection"></variable>
-              <condition value="(templateId.where(root = '2.16.840.1.113883.10.20.1.11'))"></condition>
+              <condition value="(templateId.where(root = '1.3.6.1.4.1.19376.1.5.3.1.3.6'))"></condition>
             </source>
             <target>
               <context value="tgt"></context>
@@ -2818,6 +2842,97 @@ target:
         <variable value="tgtSection"></variable>
         <variable value="bundle"></variable>
       </dependent>
+    </rule>
+    <rule>
+      <name value="cdaEntryPI"></name>
+      <source>
+        <context value="src"></context>
+        <element value="entry"></element>
+        <variable value="cdaEntryPI"></variable>
+        <condition value="(act.templateId.where(root = '1.3.6.1.4.1.19376.1.5.3.1.4.5.2'))"></condition>
+      </source>
+      <target>
+        <context value="bundle"></context>
+        <contextType value="variable"></contextType>
+        <element value="entry"></element>
+        <variable value="e"></variable>
+      </target>
+      <target>
+        <context value="e"></context>
+        <contextType value="variable"></contextType>
+        <element value="resource"></element>
+        <variable value="pastIllness"></variable>
+        <transform value="create"></transform>
+        <parameter>
+          <valueString value="Condition"></valueString>
+        </parameter>
+      </target>
+      <target>
+        <context value="pastIllness"></context>
+        <contextType value="variable"></contextType>
+        <element value="id"></element>
+        <variable value="uuid"></variable>
+        <transform value="uuid"></transform>
+      </target>
+      <target>
+        <context value="e"></context>
+        <contextType value="variable"></contextType>
+        <element value="fullUrl"></element>
+        <transform value="append"></transform>
+        <parameter>
+          <valueString value="urn:uuid:"></valueString>
+        </parameter>
+        <parameter>
+          <valueId value="uuid"></valueId>
+        </parameter>
+      </target>
+      <target>
+        <context value="tgt"></context>
+        <contextType value="variable"></contextType>
+        <element value="entry"></element>
+        <variable value="reference"></variable>
+        <transform value="create"></transform>
+        <parameter>
+          <valueString value="Reference"></valueString>
+        </parameter>
+      </target>
+      <target>
+        <context value="reference"></context>
+        <contextType value="variable"></contextType>
+        <element value="type"></element>
+        <transform value="copy"></transform>
+        <parameter>
+          <valueString value="Condition"></valueString>
+        </parameter>
+      </target>
+      <target>
+        <context value="reference"></context>
+        <contextType value="variable"></contextType>
+        <element value="reference"></element>
+        <transform value="append"></transform>
+        <parameter>
+          <valueString value="urn:uuid:"></valueString>
+        </parameter>
+        <parameter>
+          <valueId value="uuid"></valueId>
+        </parameter>
+      </target>
+      <rule>
+        <name value="act"></name>
+        <source>
+          <context value="cdaEntryPI"></context>
+          <element value="act"></element>
+          <variable value="act"></variable>
+        </source>
+        <dependent>
+          <name value="MedicalProblemEntry"></name>
+          <variable value="src"></variable>
+          <variable value="act"></variable>
+          <variable value="patient"></variable>
+          <variable value="pastIllness"></variable>
+          <variable value="bundle"></variable>
+        </dependent>
+      </rule>
     </rule>
   </group>
   <group>
@@ -5581,6 +5696,230 @@ http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode"></
           </parameter>
         </target>
       </rule>
+    </rule>
+  </group>
+  <group>
+    <name value="MedicalProblemEntry"></name>
+    <typeMode value="none"></typeMode>
+    <documentation value="///////////////////////////////////////////////////////////////////////
+MEDICAL PROBLEM ENTRY
+http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-medical-problems"></documentation>
+    <input>
+      <name value="section"></name>
+      <type value="Section"></type>
+      <mode value="source"></mode>
+    </input>
+    <input>
+      <name value="src"></name>
+      <type value="Act"></type>
+      <mode value="source"></mode>
+    </input>
+    <input>
+      <name value="patient"></name>
+      <type value="Patient"></type>
+      <mode value="source"></mode>
+    </input>
+    <input>
+      <name value="condition"></name>
+      <type value="Condition"></type>
+      <mode value="target"></mode>
+    </input>
+    <input>
+      <name value="bundle"></name>
+      <type value="Bundle"></type>
+      <mode value="target"></mode>
+    </input>
+    <rule>
+      <name value="meta"></name>
+      <source>
+        <context value="src"></context>
+      </source>
+      <target>
+        <context value="condition"></context>
+        <contextType value="variable"></contextType>
+        <element value="meta"></element>
+        <variable value="meta"></variable>
+      </target>
+      <target>
+        <context value="meta"></context>
+        <contextType value="variable"></contextType>
+        <element value="profile"></element>
+        <variable value="profile"></variable>
+      </target>
+      <target>
+        <context value="profile"></context>
+        <contextType value="variable"></contextType>
+        <element value="value"></element>
+        <transform value="copy"></transform>
+        <parameter>
+          <valueString value="http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-medical-problems"></valueString>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="patient"></name>
+      <source>
+        <context value="patient"></context>
+      </source>
+      <target>
+        <context value="condition"></context>
+        <contextType value="variable"></contextType>
+        <element value="subject"></element>
+        <variable value="reference"></variable>
+        <transform value="create"></transform>
+        <parameter>
+          <valueString value="Reference"></valueString>
+        </parameter>
+      </target>
+      <target>
+        <context value="reference"></context>
+        <contextType value="variable"></contextType>
+        <element value="type"></element>
+        <transform value="copy"></transform>
+        <parameter>
+          <valueString value="Patient"></valueString>
+        </parameter>
+      </target>
+      <target>
+        <context value="reference"></context>
+        <contextType value="variable"></contextType>
+        <element value="reference"></element>
+        <transform value="evaluate"></transform>
+        <parameter>
+          <valueString value="'urn:uuid:' + %patient.id"></valueString>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="id"></name>
+      <source>
+        <context value="src"></context>
+        <element value="id"></element>
+        <variable value="vvv"></variable>
+      </source>
+      <target>
+        <context value="condition"></context>
+        <contextType value="variable"></contextType>
+        <element value="identifier"></element>
+        <variable value="vvv"></variable>
+        <transform value="create"></transform>
+      </target>
+    </rule>
+    <rule>
+      <name value="effectiveTime"></name>
+      <source>
+        <context value="src"></context>
+        <element value="effectiveTime"></element>
+        <variable value="et"></variable>
+      </source>
+      <rule>
+        <name value="value"></name>
+        <source>
+          <context value="et"></context>
+          <element value="low"></element>
+          <variable value="date"></variable>
+        </source>
+        <target>
+          <context value="condition"></context>
+          <contextType value="variable"></contextType>
+          <element value="recordedDate"></element>
+          <variable value="rd"></variable>
+        </target>
+        <dependent>
+          <name value="TSDateTime"></name>
+          <variable value="date"></variable>
+          <variable value="rd"></variable>
+        </dependent>
+      </rule>
+    </rule>
+    <rule>
+      <name value="entryRelationship"></name>
+      <source>
+        <context value="src"></context>
+        <element value="entryRelationship"></element>
+        <variable value="entryRelationship"></variable>
+      </source>
+      <rule>
+        <name value="observation"></name>
+        <source>
+          <context value="entryRelationship"></context>
+          <element value="observation"></element>
+          <variable value="observation"></variable>
+        </source>
+        <rule>
+          <name value="value"></name>
+          <source>
+            <context value="observation"></context>
+            <element value="value"></element>
+            <variable value="value"></variable>
+          </source>
+          <target>
+            <context value="condition"></context>
+            <contextType value="variable"></contextType>
+            <element value="code"></element>
+            <variable value="cc"></variable>
+          </target>
+          <dependent>
+            <name value="CDCodeableConcept"></name>
+            <variable value="value"></variable>
+            <variable value="cc"></variable>
+          </dependent>
+        </rule>
+        <rule>
+          <name value="effectiveTime"></name>
+          <source>
+            <context value="observation"></context>
+            <element value="effectiveTime"></element>
+            <variable value="et"></variable>
+          </source>
+          <rule>
+            <name value="value"></name>
+            <source>
+              <context value="et"></context>
+              <element value="low"></element>
+              <variable value="date"></variable>
+            </source>
+            <target>
+              <context value="condition"></context>
+              <contextType value="variable"></contextType>
+              <element value="abatement"></element>
+              <variable value="value"></variable>
+              <transform value="create"></transform>
+              <parameter>
+                <valueString value="dateTime"></valueString>
+              </parameter>
+            </target>
+            <dependent>
+              <name value="TSDateTime"></name>
+              <variable value="date"></variable>
+              <variable value="value"></variable>
+            </dependent>
+          </rule>
+        </rule>
+      </rule>
+    </rule>
+    <rule>
+      <name value="statusCode"></name>
+      <source>
+        <context value="src"></context>
+        <element value="statusCode"></element>
+        <condition value="(src.statusCode.code.where('active'))"></condition>
+      </source>
+      <target>
+        <context value="condition"></context>
+        <contextType value="variable"></contextType>
+        <element value="clinicalStatus"></element>
+        <transform value="cc"></transform>
+        <parameter>
+          <valueString value="http://terminology.hl7.org/CodeSystem/condition-clinical"></valueString>
+        </parameter>
+        <parameter>
+          <valueString value="active"></valueString>
+        </parameter>
+        <parameter>
+          <valueString value="Active"></valueString>
+        </parameter>
+      </target>
     </rule>
   </group>
   <group>

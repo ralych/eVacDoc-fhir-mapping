@@ -231,7 +231,7 @@ group eVacDocClinicalDocumentComposition(source src : ClinicalDocument, target t
         
           // Medical Problems
           //2.16.756.5.30.1.127.10.3.2, 1.3.6.1.4.1.19376.1.5.3.1.3.6, 2.16.840.1.113883.10.20.1.11
-          component.section as srcSection where (templateId.where(root='2.16.840.1.113883.10.20.1.11')) -> tgt.section as tgtSection then eVacDocMedicalProblemsSectionContentModule(srcSection, patientResource, tgtSection, bundle);
+          component.section as srcSection where (templateId.where(root='1.3.6.1.4.1.19376.1.5.3.1.3.6')) -> tgt.section as tgtSection then eVacDocMedicalProblemsSectionContentModule(srcSection, patientResource, tgtSection, bundle);
         
           // Undergone illnesses for immunization
           // 2.16.756.5.30.1.127.10.3.3, 	1.3.6.1.4.1.19376.1.5.3.1.3.8
@@ -307,15 +307,24 @@ group eVacDocMedicalProblemsSectionContentModule(source src : Section, source pa
 	src.title as t -> tgt.title = 'Medical Problems' "title";//(t.dataString);
 	//src.code -> tgt.code;
 	src.code -> tgt.code as code,
-           code.coding = create('Coding') as coding,
-         	  coding.system = 'http://loinc.org',
-         	  coding.code = '11450-4',
-         	  coding.display = 'Problem list Reported' "coding";
-     src.text as cdaText -> tgt.text as fhirText then {
-     	cdaText -> fhirText.status = 'generated' "narrativeStatus";
-     	cdaText as t -> fhirText.div = t "narrativeText";
-     } "cdaText";
-     src.section as srcSection -> tgt.section as tgtSection then eVacDocMedicalProblemsSectionContentModule(srcSection, patient, tgtSection, bundle);
+    code.coding = create('Coding') as coding,
+    coding.system = 'http://loinc.org',
+    coding.code = '11450-4',
+    coding.display = 'Problem list Reported' "coding";
+
+  src.text as cdaText -> tgt.text as fhirText then {
+  	cdaText -> fhirText.status = 'generated' "narrativeStatus";
+   	cdaText as t -> fhirText.div = t "narrativeText";
+   } "cdaText";
+  
+  src.section as srcSection -> tgt.section as tgtSection then eVacDocMedicalProblemsSectionContentModule(srcSection, patient, tgtSection, bundle);
+  
+  src.entry as cdaEntryPI where (act.templateId.where(root='1.3.6.1.4.1.19376.1.5.3.1.4.5.2')) ->  bundle.entry as e,  e.resource = create('Condition') as pastIllness,  
+    pastIllness.id = uuid() as uuid,
+    e.fullUrl = append('urn:uuid:',uuid), 
+    tgt.entry = create('Reference') as reference, reference.type='Condition', reference.reference = append('urn:uuid:',uuid) then {
+      cdaEntryPI.act as act then MedicalProblemEntry(src, act, patient, pastIllness, bundle);
+    } "cdaEntryPI";
 }
 
 // ///////////////////////////////////////////////////////////////////////
@@ -601,6 +610,34 @@ group eVacDocChExtEprConfidentialityCode(source src: Coding, target ext: Extensi
       	src.code as sc -> coding.code as cc, cc.value = sc "code";
       	src.display as sd -> coding.display as cd, cd.value = sd "display";
       } "codableconcept";
+}
+
+
+
+// ///////////////////////////////////////////////////////////////////////
+// MEDICAL PROBLEM ENTRY
+// http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-medical-problems
+group MedicalProblemEntry(source section : Section, source src : Act, source patient : Patient, target condition : Condition, target bundle: Bundle) {
+  src -> condition.meta as meta,
+    meta.profile as profile,
+    profile.value = 'http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-medical-problems' "meta";
+
+  patient -> condition.subject  = create('Reference') as reference, reference.type='Patient', reference.reference = ('urn:uuid:'+%patient.id) "patient";
+  src.id -> condition.identifier;
+  src.effectiveTime as et then {
+    et.low as date -> condition.recordedDate as rd then TSDateTime(date, rd) "value";
+  } "effectiveTime";
+
+  src.entryRelationship as entryRelationship then {
+    entryRelationship.observation as observation then {
+      observation.value as value -> condition.code as cc then CDCodeableConcept(value, cc);
+      observation.effectiveTime as et then {
+        et.low as date -> condition.abatement = create('dateTime') as value then TSDateTime(date, value) "value";
+      } "effectiveTime";
+    } "observation";
+  } "entryRelationship";
+
+  src.statusCode where (src.statusCode.code.where('active')) -> condition.clinicalStatus = cc('http://terminology.hl7.org/CodeSystem/condition-clinical','active', 'Active');
 }
 
 // ///////////////////////////////////////////////////////////////////////
